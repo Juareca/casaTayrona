@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.contenido {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+.tarjeta {
+    display: block;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    margin: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.img-tarjeta img {
+    width: 100%;
+    height: auto;
+}
+
+.detalles-tarjeta {
+    padding: 1rem;
+}
+
+.detalles-tarjeta h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.detalles-tarjeta p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Media Queries */
+
+/* Small devices (phones, less than 600px) */
+@media (max-width: 599px) {
+    .contenido {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+    
+    .tarjeta {
+        max-width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Medium devices (tablets, 600px and up) */
+@media (min-width: 600px) and (max-width: 1199px) {
+    .contenido {
+        flex-wrap: wrap;
+    }
+    
+    .tarjeta {
+        max-width: 45%;
+        margin: 1rem;
+    }
+}
+
+/* Large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .contenido {
+        justify-content: space-evenly;
+    }
+    
+    .tarjeta {
+        max-width: 30%;
+        margin: 1rem;
+    }
+}
