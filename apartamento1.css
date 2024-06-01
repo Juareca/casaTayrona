@@ -54,11 +54,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px; 
+    padding: 20px;
+    pointer-events: none; /* Hacer que el contenedor no sea interactivo */
 }
 
-.itemCarrouselArrows > i:hover {
+.itemCarrouselArrows > a {
+    pointer-events: auto; /* Hacer que las flechas sean interactivas */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mayor visibilidad */
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.itemCarrouselArrows > a > i {
+    color: white;
+    font-size: 2.5em;
+}
+
+.itemCarrouselArrows > a > i:hover {
     cursor: pointer;
+    color: #ffd700; /* Cambiar el color al pasar el ratón */
 }
 
 #itemCarrousel-1 {
@@ -77,6 +91,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    margin-top: 10px; /* Separación con el carrusel */
 }
 
 .conteCarrouselController > a {
@@ -85,14 +100,10 @@ body {
     color: grey;
 }
 
-.itemCarrouselArrows > a > i {
-    color: white;
-    font-size: 2.5em;
-}
-
 img {
     height: 100%;
     width: 100%;
+    object-fit: cover; /* Asegurarse de que la imagen cubra el área */
 }
 
 /* Media queries para pantallas más pequeñas */
@@ -100,7 +111,7 @@ img {
     .conteCarrousel {
         height: 200px;
     }
-    .carrousel{
+    .carrousel {
         width: 95%;
         margin-top: 10px;
     }
