@@ -1,22 +1,28 @@
-/* Reset de estilos y configuración base */
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 header {
-    background-color: rgb(98, 173, 98);
-    height: 100px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    background-color: #6e77ee;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+.iconoHome{
+    padding-left: 50px;
+    font-size: 30px;
+    color: white;
+}
+
+.tituloHeader {
+    text-align: center; /* Centra el contenido horizontalmente */
+    margin-left: 30%; /* Ajusta el margen superior según tus necesidades */
 }
 
 /* Estilos del carrusel */
@@ -122,6 +128,20 @@ img {
 
     .itemCarrouselArrows i {
         font-size: 1.5em;
+    }
+
+    .iconoHome{
+        padding-left: 20px;
+        font-size: 25px;
+    }
+    
+    .tituloHeader {
+        text-align: center; /* Centra el contenido horizontalmente */
+        margin-left: 12%; /* Ajusta el margen superior según tus necesidades */
+    }
+
+    .tituloHeader h1{
+        font-size: 25px;
     }
 }
 
