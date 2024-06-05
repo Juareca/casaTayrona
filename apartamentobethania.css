@@ -106,6 +106,18 @@ img {
     object-fit: cover; /* Asegurarse de que la imagen cubra el área */
 }
 
+.ubicacion{
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+}
+
+.reserva{
+    height: 200px;
+    width: 200px;
+    background-color: #ffd700;
+}
+
 /* Media queries para pantallas más pequeñas */
 @media (max-width: 600px) {
     .conteCarrousel {
@@ -173,15 +185,23 @@ img {
 }
 
 @media (min-width: 1200px) {
-    .conteCarrousel {
-        height: 450px;
+    @media (min-width: 1200px) {
+        .conteCarrousel {
+            height: 550px; /* Disminuye la altura del carrusel */
+        }
+    
+        .itemCarrouselArrows i {
+            font-size: 2em; /* Ajusta el tamaño de las flechas si es necesario */
+        }
+        
+        .conteCarrouselController > a {
+            font-size: 2em; /* Ajusta el tamaño de los controladores si es necesario */
+        }
+    
+        img {
+            height: auto;
+            max-height: 500px; /* Disminuye la altura máxima de las imágenes */
+        }
     }
-
-    .conteCarrouselController > a {
-        font-size: 2.5em;
-    }
-
-    .itemCarrouselArrows i {
-        font-size: 2.5em;
-    }
+    
 }
