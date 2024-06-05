@@ -116,6 +116,10 @@ img {
         margin-top: 10px;
     }
 
+    .itemCarrousel {
+        font-size: 8px;
+    }
+
     .conteCarrouselController > a {
         font-size: 1.5em;
     }
