@@ -93,6 +93,38 @@ h4 {
     line-height: 1.5;
 }
 
+/* Estilos para el footer */
+footer {
+    text-align: center;
+}
+
+
+.redes-sociales {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.redes-sociales li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.redes-sociales li:nth-child(1) a {
+    color: red;
+    font-size: 24px;
+}
+
+.redes-sociales li:nth-child(2) a {
+    color: green;
+    font-size: 24px;
+}
+
+.redes-sociales li:nth-child(3) a {
+    color: #007bff;
+    font-size: 24px;
+}
+
 
 
 /* Media Queries */

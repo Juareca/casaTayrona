@@ -20,8 +20,15 @@
 
     <div class="carrousel">
 
-        <h2>Apartamento Bethania, Santa Marta - Colombia</h2>
-        <p> <i class="fa-solid fa-location-dot"></i> Carrera 17 # 6-31 Bethania - Santa Marta</p>
+        <div class="cabeza">
+            <div class="info">
+                <h2>Apartamento Bethania, Santa Marta - Colombia</h2>
+                <p><i class="fa-solid fa-location-dot"></i> Carrera 17 # 6-31 Bethania - Santa Marta</p>
+            </div>
+            <div class="btnReservar">
+                <button>Reservar ahora</button>
+            </div>
+        </div>
 
         <div class="conteCarrousel">
             <div class="itemCarrousel" id="itemCarrousel-1">
@@ -29,10 +36,10 @@
                     <img src="imgBethania/IMG-20240601-WA0000.jpg" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
-                    <a href="#itemCarrousel-3">
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-3')">
                         <i class="fas fa-chevron-left"></i>
                     </a>
-                    <a href="#itemCarrousel-2">
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-2')">
                         <i class="fas fa-chevron-right"></i>
                     </a>
                 </div>
@@ -43,10 +50,10 @@
                     <img src="imgBethania/IMG-20240601-WA0012.jpg" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
-                    <a href="#itemCarrousel-1">
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-1')">
                         <i class="fas fa-chevron-left"></i>
                     </a>
-                    <a href="#itemCarrousel-3">
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-3')">
                         <i class="fas fa-chevron-right"></i>
                     </a>
                 </div>
@@ -57,10 +64,10 @@
                     <img src="imgBethania/IMG-20240601-WA0013.jpg" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
-                    <a href="#itemCarrousel-2">
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-2')">
                         <i class="fas fa-chevron-left"></i>
                     </a>
-                    <a href="#itemCarrousel-1">
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-1')">
                         <i class="fas fa-chevron-right"></i>
                     </a>
                 </div>
@@ -87,17 +94,22 @@
         <i class="fa-solid fa-wifi"></i> 
         <i class="fa-solid fa-dog"></i>
         <i class="fa-solid fa-ban"></i>
+        
+
+        <h3>Como llegar</h3>
 
         <div class="ubicacion">
-            Aqui va la ubicacion
+            <div class="waze">
+                <a href="https://www.waze.com/ul?ll=4.710989,-74.072090&navigate=yes">Abrir en Waze</a>
+            </div>
+            <div class="maps">
+                <a href="https://www.google.com/maps/search/?api=1&query=4.710989,-74.072090">Abrir en Google Maps</a>
+            </div>
         </div>
-
-        <div class="reserva">
-            Aqui va la reserva
-        </div>
+        
 
     </div>
 
-    </div>
+    <script src="apartamentobethania.js"></script>
 </body>
 </html>
