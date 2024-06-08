@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #c3c4c9;
 }
 
 /* Estilo del encabezado */
@@ -11,18 +12,25 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #6e77ee;
-    color: white;
+    background-color: #789fd1;
     padding: 1rem; /* Reducir el espacio de padding */
     position: relative;
 }
 
 .iconoHome {
-    padding-left: 10px; /* Reducir el espacio de padding */
-    font-size: 20px; /* Reducir el tamaño del icono */
-    color: white;
-    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente los elementos */
+    text-decoration: none; /* Asegura que el texto no tenga subrayado */
+    color: white; /* Color del texto */
 }
+
+.iconoHome span {
+    padding-top: 5px;
+    font-size: 16px; /* Tamaño de fuente del texto */
+    color: #dfdada;
+}
+
 
 .tituloHeader {
     display: flex;
@@ -30,6 +38,7 @@ header {
     justify-content: center;
     flex: 1;
     font-size: 1rem; /* Reducir el tamaño del texto del título */
+    margin-right: 43.75px;
 }
 
 .tituloHeader img {
@@ -45,7 +54,6 @@ header {
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 2rem;
-    background-color: #f4f4f4;
 }
 
 /* Estilo de las tarjetas */
@@ -53,7 +61,7 @@ header {
     display: flex;
     flex-direction: row;
     text-decoration: none;
-    background-color: white;
+    background-color: rgb(219, 202, 202);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -62,7 +70,10 @@ header {
     height: 200px;
     margin: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 0.5px solid rgb(131, 127, 127); /* Agrega un borde de 1px sólido negro */
+   
 }
+
 
 .tarjeta:hover {
     transform: translateY(-5px);
@@ -107,16 +118,7 @@ header {
     line-height: 1.5;
 }
 
-/* Estilo del pie de página */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #acadb4;
-    color: black;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+
 
 /* Estilo de la lista de redes sociales */
 .redes-sociales {
@@ -148,6 +150,7 @@ footer {
 
 .redes-sociales li span {
     font-size: 12px;
+    color: white;
 }
 
 
@@ -166,6 +169,15 @@ footer {
 
 .redes-sociales li:nth-child(4) i {
     color: blue;
+}
+
+/* Estilo del pie de página */
+/* Estilo del pie de página */
+footer {
+    text-align: center;
+    background-color: #789fd1;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Media Queries para diferentes dispositivos */
