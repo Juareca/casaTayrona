@@ -12,7 +12,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #789fd1;
+    background-color: #5582bd;
     padding: 1rem; /* Reducir el espacio de padding */
     position: relative;
 }
@@ -175,7 +175,7 @@ header {
 /* Estilo del pie de página */
 footer {
     text-align: center;
-    background-color: #789fd1;
+    background-color: #5582bd;
     bottom: 0;
     width: 100%;
 }
