@@ -10,33 +10,34 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ajusta para mantener el espacio entre el icono y el título */
+    justify-content: space-between;
     background-color: #6e77ee;
     color: white;
-    padding: 1rem;
+    padding: 1rem; /* Reducir el espacio de padding */
     position: relative;
 }
 
 .iconoHome {
-    padding-left: 20px; /* Mantener el espacio de padding */
-    font-size: 30px;
+    padding-left: 10px; /* Reducir el espacio de padding */
+    font-size: 20px; /* Reducir el tamaño del icono */
     color: white;
-    text-decoration: none; /* Asegura que el icono no tenga subrayado */
+    text-decoration: none;
 }
 
 .tituloHeader {
     display: flex;
-    margin-right: 35px;
-    align-items: center; /* Centra verticalmente la imagen */
-    justify-content: center; /* Centra horizontalmente la imagen */
-    flex: 1; /* Permite que el div ocupe todo el espacio disponible */
-    margin-left: auto; /* Mueve el titulo al extremo derecho */
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    font-size: 1rem; /* Reducir el tamaño del texto del título */
 }
 
 .tituloHeader img {
-    width: 150px; /* Ajusta el ancho de la imagen */
-    height: auto; /* Permite que la altura se ajuste automáticamente */
+    width: 100px;
+    height: 100px; /* Reducir el tamaño de la imagen */
+    margin: 0;
 }
+
 
 /* Estilo del contenedor de contenido principal */
 .contenido {
@@ -110,7 +111,7 @@ header {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #6e77ee;
+    background-color: #acadb4;
     color: black;
     position: fixed;
     bottom: 0;
