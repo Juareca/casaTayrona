@@ -1,3 +1,4 @@
+/* Estilo general del cuerpo */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,31 +6,39 @@ body {
     box-sizing: border-box;
 }
 
+/* Estilo del encabezado */
 header {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Ajusta para mantener el espacio entre el icono y el título */
     background-color: #6e77ee;
     color: white;
-    text-align: center;
-    padding: 1rem 0;
+    padding: 1rem;
+    position: relative;
 }
 
-.iconoHome{
-    padding-left: 50px;
+.iconoHome {
+    padding-left: 20px; /* Mantener el espacio de padding */
     font-size: 30px;
     color: white;
+    text-decoration: none; /* Asegura que el icono no tenga subrayado */
 }
 
 .tituloHeader {
-    text-align: center; /* Centra el contenido horizontalmente */
-    margin-left: 30%; /* Ajusta el margen superior según tus necesidades */
+    display: flex;
+    margin-right: 35px;
+    align-items: center; /* Centra verticalmente la imagen */
+    justify-content: center; /* Centra horizontalmente la imagen */
+    flex: 1; /* Permite que el div ocupe todo el espacio disponible */
+    margin-left: auto; /* Mueve el titulo al extremo derecho */
 }
 
-
-h4 {
-    color: rgb(53, 50, 50);
+.tituloHeader img {
+    width: 150px; /* Ajusta el ancho de la imagen */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
 }
 
+/* Estilo del contenedor de contenido principal */
 .contenido {
     display: flex;
     flex-wrap: wrap;
@@ -38,6 +47,7 @@ h4 {
     background-color: #f4f4f4;
 }
 
+/* Estilo de las tarjetas */
 .tarjeta {
     display: flex;
     flex-direction: row;
@@ -58,6 +68,7 @@ h4 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilo de la imagen dentro de la tarjeta */
 .img-tarjeta {
     flex: 1 1 40%;
     overflow: hidden;
@@ -69,12 +80,14 @@ h4 {
     object-fit: cover;
 }
 
+/* Estilo de los detalles de la tarjeta */
 .detalles-tarjeta {
     flex: 1 1 60%;
     padding: 1rem;
     position: relative;
     font-size: 13px;
     height: auto;
+    color: #333;
 }
 
 .detalles-tarjeta h2 {
@@ -93,44 +106,70 @@ h4 {
     line-height: 1.5;
 }
 
-/* Estilos para el footer */
+/* Estilo del pie de página */
 footer {
     text-align: center;
+    padding: 1rem;
+    background-color: #6e77ee;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
+/* Estilo de la lista de redes sociales */
+.redes-sociales {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Centra los elementos horizontalmente */
+}
 
 .redes-sociales li {
     display: inline-block;
-    margin-right: 20px; /* Ajusta el margen entre cada ícono según sea necesario */
+    margin: 20px;
     text-align: center;
 }
 
 .redes-sociales li a {
-    display: block;
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #333; /* Cambia el color del texto */
-}
-
-.redes-sociales li a:hover {
-    color: #666; /* Cambia el color del texto al pasar el ratón sobre el enlace */
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
 }
 
 .redes-sociales li i {
-    font-size: 24px; /* Ajusta el tamaño del icono según sea necesario */
-    margin-bottom: 5px; /* Ajusta el margen inferior del icono */
+    font-size: 24px;
+    margin-bottom: 5px;
 }
 
 .redes-sociales li span {
-    display: block;
-    font-size: 12px; /* Ajusta el tamaño del texto según sea necesario */
+    font-size: 12px;
 }
 
 
+/* Colores específicos para los íconos sociales */
+.redes-sociales li:nth-child(1) i {
+    color: green;
+}
 
+.redes-sociales li:nth-child(2) i {
+    color: red;
+}
 
-/* Media Queries */
+.redes-sociales li:nth-child(3) i {
+    color: green;
+}
 
-/* Small devices (phones, less than 600px) */
+.redes-sociales li:nth-child(4) i {
+    color: blue;
+}
+
+/* Media Queries para diferentes dispositivos */
+
+/* Dispositivos pequeños (menos de 600px) */
 @media (max-width: 599px) {
     .contenido {
         flex-direction: column;
@@ -139,53 +178,41 @@ footer {
     }
 
     .tarjeta {
-        flex-direction: row;
+        flex-direction: column;
         max-width: 100%;
         margin: 0.5rem 0;
-        height: auto; /* Ajustar la altura a auto para una visualización adecuada */
+        height: auto;
     }
 
-    .img-tarjeta, .detalles-tarjeta {
-        flex: 1 1 40%; /* Ajustar para asegurar que estén uno al lado del otro en pantallas pequeñas */
-    }
-
-    .img-tarjeta {
-        padding: 5px; 
-        height: auto; /* Ajustar la altura a auto para una visualización adecuada */
-    }
-
+    .img-tarjeta,
     .img-tarjeta img {
         width: 100%;
-        height: 100%;
+        height: auto;
         object-fit: cover;
     }
 
     .detalles-tarjeta {
-        height: 100%;
+        height: auto;
+        padding: 1rem;
     }
 
-    .iconoHome{
+    .iconoHome {
         padding-left: 20px;
         font-size: 25px;
     }
-    
+
     .tituloHeader {
-        text-align: center; /* Centra el contenido horizontalmente */
-        margin-left: 12%; /* Ajusta el margen superior según tus necesidades */
+        text-align: center;
+        margin-left: 0;
+        padding-right: 0;
     }
-
-    .tituloHeader h1{
-        font-size: 25px;
-    }
-
-    
 }
 
-
-/* Medium devices (tablets, 600px and up) */
+/* Dispositivos medianos (600px a 1199px) */
 @media (min-width: 600px) and (max-width: 1199px) {
     .contenido {
         flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 
     .tarjeta {
@@ -194,7 +221,7 @@ footer {
     }
 }
 
-/* Large devices (desktops, 1200px and up) */
+/* Dispositivos grandes (1200px en adelante) */
 @media (min-width: 1200px) {
     .contenido {
         justify-content: space-evenly;
