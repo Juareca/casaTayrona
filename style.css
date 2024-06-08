@@ -99,31 +99,32 @@ footer {
 }
 
 
-.redes-sociales {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px 0;
-}
-
 .redes-sociales li {
     display: inline-block;
-    margin: 0 20px;
+    margin-right: 20px; /* Ajusta el margen entre cada ícono según sea necesario */
+    text-align: center;
 }
 
-.redes-sociales li:nth-child(1) a {
-    color: red;
-    font-size: 24px;
+.redes-sociales li a {
+    display: block;
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #333; /* Cambia el color del texto */
 }
 
-.redes-sociales li:nth-child(2) a {
-    color: green;
-    font-size: 24px;
+.redes-sociales li a:hover {
+    color: #666; /* Cambia el color del texto al pasar el ratón sobre el enlace */
 }
 
-.redes-sociales li:nth-child(3) a {
-    color: #007bff;
-    font-size: 24px;
+.redes-sociales li i {
+    font-size: 24px; /* Ajusta el tamaño del icono según sea necesario */
+    margin-bottom: 5px; /* Ajusta el margen inferior del icono */
 }
+
+.redes-sociales li span {
+    display: block;
+    font-size: 12px; /* Ajusta el tamaño del texto según sea necesario */
+}
+
 
 
 
@@ -176,6 +177,8 @@ footer {
     .tituloHeader h1{
         font-size: 25px;
     }
+
+    
 }
 
 
