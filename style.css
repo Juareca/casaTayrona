@@ -132,6 +132,13 @@ header, footer{
     color: #000;
 }
 
+/* Estilo del pie de página */
+footer {
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
 /* Estilo de la lista de redes sociales */
 .redes-sociales {
     list-style: none;
@@ -180,13 +187,6 @@ header, footer{
 
 .redes-sociales li:nth-child(4) i {
     color: blue;
-}
-
-/* Estilo del pie de página */
-footer {
-    text-align: center;
-    bottom: 0;
-    width: 100%;
 }
 
 /* Media Queries para diferentes dispositivos */
@@ -455,3 +455,5 @@ footer {
     z-index: 1000; /* Asegura que el footer esté por encima de otros elementos */
 }
 }
+
+
