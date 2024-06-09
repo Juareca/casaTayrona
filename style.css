@@ -366,8 +366,6 @@ footer {
     }
 }
 
-
-
 /* Dispositivos grandes (1200px en adelante) */
 @media (min-width: 1030px){
     .contenido {

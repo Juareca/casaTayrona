@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Tayrona</title>
+    <link rel="stylesheet" href="betania.css">
+    <script src="https://kit.fontawesome.com/adf6f04551.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <a href="index.html" class="iconoHome"> <!-- Agrega el enlace aquí -->
+            <i class="fa-solid fa-house"></i>
+            <span>Inicio</span>
+        </a>
+        <div class="tituloHeader">
+            <img src="imgBethania/CASA_TAYRONA-removebg-preview.png" alt="">
+        </div>
+    </header>
+
+    <div class="carrousel">
+
+        <div class="cabeza">
+            <div class="info">
+                <h3>Apartamento Betania, Santa Marta - Colombia</h2>
+                <p><i class="fa-solid fa-location-dot"></i> Carrera 17 # 6-31 Betania - Santa Marta</p>
+                <button>Reservar ahora</button>
+            </div>
+        </div>
+
+        <div class="conteCarrousel">
+            <div class="itemCarrousel" id="itemCarrousel-1">
+                <div class="itemCarrouselTarjeta">
+                    <img src="imgBethania/IMG-20240601-WA0000.jpg" alt="">
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-15')">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-2')">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="itemCarrousel" id="itemCarrousel-2">
+                <div class="itemCarrouselTarjeta">
+                    <img src="imgBethania/IMG-20240601-WA0001.jpg" alt="">
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-1')">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-3')">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="itemCarrousel" id="itemCarrousel-3">
+                <div class="itemCarrouselTarjeta">
+                    <img src="imgBethania/IMG-20240601-WA0002.jpg" alt="">
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-2')">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-4')">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="itemCarrousel" id="itemCarrousel-4">
+                <div class="itemCarrouselTarjeta">
+                    <img src="imgBethania/IMG-20240601-WA0003.jpg" alt="">
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-3')">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-5')">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="itemCarrousel" id="itemCarrousel-5">
+                <div class="itemCarrouselTarjeta">
+                    <img src="imgBethania/IMG-20240601-WA0004.jpg" alt="">
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-4')">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-7')">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="itemCarrousel" id="itemCarrousel-7">
+                <div class="itemCarrouselTarjeta">
+                    <img src="imgBethania/IMG-20240601-WA0014.jpg" alt="">
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-5')">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-8')">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="itemCarrousel" id="itemCarrousel-8">
+                <div class="itemCarrouselTarjeta">
+                    <img src="imgBethania/IMG-20240601-WA0007.jpg" alt="">
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-7')">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-9')">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="itemCarrousel" id="itemCarrousel-9">
+                <div class="itemCarrouselTarjeta">
+                    <img src="imgBethania/IMG-20240601-WA0008.jpg" alt="">
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-8')">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-10')">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="itemCarrousel" id="itemCarrousel-10">
+                <div class="itemCarrouselTarjeta">
+                    <img src="imgBethania/IMG-20240601-WA0009.jpg" alt="">
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-9')">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-11')">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="itemCarrousel" id="itemCarrousel-11">
+                <div class="itemCarrouselTarjeta">
+                    <img src="imgBethania/IMG-20240601-WA0010.jpg" alt="">
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-10')">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-12')">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="itemCarrousel" id="itemCarrousel-12">
+                <div class="itemCarrouselTarjeta">
+                    <img src="imgBethania/IMG-20240601-WA0011.jpg" alt="">
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-11')">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-13')">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="itemCarrousel" id="itemCarrousel-13">
+                <div class="itemCarrouselTarjeta">
+                    <img src="imgBethania/IMG-20240601-WA0012.jpg" alt="">
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-12')">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-14')">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="itemCarrousel" id="itemCarrousel-14">
+                <div class="itemCarrouselTarjeta">
+                    <img src="imgBethania/IMG-20240601-WA0006.jpg" alt="">
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-13')">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-15')">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="itemCarrousel" id="itemCarrousel-15">
+                <div class="itemCarrouselTarjeta">
+                    <img src="imgBethania/IMG-20240601-WA0013.jpg" alt="">
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-14')">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#" onclick="cambiarImagen('itemCarrousel-1')">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="conteCarrouselController">
+            <a href="#itemCarrousel-1">•</a>
+            <a href="#itemCarrousel-2">•</a>
+            <a href="#itemCarrousel-3">•</a>
+            <a href="#itemCarrousel-4">•</a>
+            <a href="#itemCarrousel-5">•</a>
+            <a href="#itemCarrousel-7">•</a>
+            <a href="#itemCarrousel-8">•</a>
+            <a href="#itemCarrousel-9">•</a>
+            <a href="#itemCarrousel-10">•</a>
+            <a href="#itemCarrousel-11">•</a>
+            <a href="#itemCarrousel-12">•</a>
+            <a href="#itemCarrousel-13">•</a>
+            <a href="#itemCarrousel-14">•</a>
+            <a href="#itemCarrousel-15">•</a>
+        </div>
+        
+    </div>
+
+    <div class="contenidoDetalles">
+        <h3>Detalles</h3>
+        <p>
+            Ubicado en el corazón de la ciudad, Casa Tayrona es el lugar perfecto para quienes buscan comodidad y estilo. Este elegante apartamento ofrece una experiencia de vida única, combinando modernidad y confort en cada rincón.
+        </p>
+
+        <h3>Servicios</h3>
+
+        <i class="fa-solid fa-wifi"></i> 
+        <i class="fa-solid fa-dog"></i>
+        <i class="fa-solid fa-ban"></i>
+        <i class="fa-solid fa-wifi"></i> 
+        <i class="fa-solid fa-dog"></i>
+        <i class="fa-solid fa-ban"></i>
+        
+
+        <h3>Como llegar</h3>
+
+        <div class="ubicacion">
+            <div class="waze">
+                <a href="https://www.waze.com/ul?ll=4.710989,-74.072090&navigate=yes">Abrir en Waze</a>
+            </div>
+            <div class="maps">
+                <a href="https://www.google.com/maps/search/?api=1&query=4.710989,-74.072090">Abrir en Google Maps</a>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <script src="apartamentobethania.js"></script>
+</body>
+</html>

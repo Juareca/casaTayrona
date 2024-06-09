@@ -6,28 +6,50 @@ body {
 }
 
 header {
+    height: 100px;
+    padding: 1rem; /* Reducir el espacio de padding */
     display: flex;
     align-items: center;
-    background-color: #6e77ee;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
+    justify-content: space-between;
+    position: relative;
 }
 
-.iconoHome{
-    padding-left: 50px;
-    font-size: 30px;
-    color: white;
+.iconoHome {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente los elementos */
+    text-decoration: none; /* Asegura que el texto no tenga subrayado */
+    color: #333; /* Color del texto */
+    font-size: 16px; /* Tamaño de fuente del texto */
+}
+
+.iconoHome span {
+    padding-top: 5px;
+    color: #333;
+}
+
+header, footer{
+    background-color: rgb(87, 155, 250);
 }
 
 .tituloHeader {
-    text-align: center; /* Centra el contenido horizontalmente */
-    margin-left: 30%; /* Ajusta el margen superior según tus necesidades */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin-right: 43.75px;
+}
+
+.tituloHeader img {
+    width: 100px;
+    height: 100%; /* Establecer la altura de la imagen al 100% del contenedor */
+    margin: 0;
+    padding: 0;
 }
 
 /* Estilos del carrusel */
 .carrousel {
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 30px;
 }
@@ -96,21 +118,23 @@ header {
 
 
 .cabeza {
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* Cambia la disposición a flex */
     align-items: center;
     padding: 0 20px; /* Añade un relleno a los lados para evitar que el contenido toque los bordes de la ventana */
 }
 
 .info {
-    flex: 1; /* Permite que este elemento ocupe todo el espacio disponible */
+    flex: 1; /* Establece la disposición como flex */
+    justify-content: center; /* Centra horizontalmente los elementos */
 }
 
-.btnReservar button {
+.info button {
+    margin-bottom: 20px;
     padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
     background-color: dodgerblue;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left:106.595px;
 }
 
 .contenidoDetalles{
@@ -120,13 +144,15 @@ header {
 
 img {
     width: 100%;
+    height: auto;
     object-fit: cover; /* Asegurarse de que la imagen cubra el área */
 }
 
-
-
 /* Media queries para pantallas más pequeñas */
 @media (max-width: 600px) {
+    body{
+        font-size: 16px;
+    }
     .conteCarrousel {
         height: 200px;
     }
@@ -145,20 +171,6 @@ img {
 
     .itemCarrouselArrows i {
         font-size: 1.5em;
-    }
-
-    .iconoHome{
-        padding-left: 20px;
-        font-size: 25px;
-    }
-    
-    .tituloHeader {
-        text-align: center; /* Centra el contenido horizontalmente */
-        margin-left: 12%; /* Ajusta el margen superior según tus necesidades */
-    }
-
-    .tituloHeader h1{
-        font-size: 25px;
     }
 
     .btnReservar button {
