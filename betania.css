@@ -137,16 +137,72 @@ header, footer{
     margin-left:106.595px;
 }
 
-.contenidoDetalles{
+.contenidoDetalles {
     padding-left: 15px;
-    padding-right: 15px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 img {
     width: 100%;
-    height: auto;
-    object-fit: cover; /* Asegurarse de que la imagen cubra el área */
+    height: 100%;
+    object-fit: scale-down; /* Asegurarse de que la imagen cubra el área */
 }
+
+.conteServicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Centra los elementos horizontalmente */
+}
+
+.servicio {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    margin-right: 20px; /* Margen entre los servicios */
+    margin-bottom: 20px; /* Margen inferior entre los servicios */
+}
+
+.icono {
+    width: 30px; /* Ancho del icono */
+    height: auto; /* Altura automática */
+    margin-right: 10px; /* Margen entre el icono y el texto */
+}
+
+.servicio span {
+    font-size: 14px; /* Tamaño del texto */
+}
+
+
+.ubicacion {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mapa {
+    width: 45%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.mapa a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mapa img {
+    width: 50px;
+    margin-bottom: 5px; /* Ajusta el margen inferior según sea necesario */
+}
+
+
+
+
+
 
 /* Media queries para pantallas más pequeñas */
 @media (max-width: 600px) {
