@@ -252,22 +252,7 @@ footer {
         text-align: left; /* Alinea el texto a la izquierda */
     }
 
-    /* Ajustes para la lista de redes sociales */
-    .redes-sociales {
-        padding: 0.5rem; /* Reduce el padding */
-    }
-
-    .redes-sociales li {
-        margin: 10px; /* Reduce el margen */
-    }
-
-    .redes-sociales li i {
-        font-size: 20px; /* Reduce el tamaño del icono */
-    }
-
-    .redes-sociales li span {
-        font-size: 10px; /* Reduce el tamaño del texto */
-    }
+   
 
     /* Ajustes para el pie de página */
     footer {
