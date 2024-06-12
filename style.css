@@ -55,7 +55,8 @@ header, footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 2rem;
+    padding: 1rem;
+    margin-top: 20px;
 }
 
 /* Estilo de las tarjetas */
@@ -192,32 +193,38 @@ footer {
 /* Media Queries para diferentes dispositivos */
 
 /* Dispositivos pequeños (menos de 600px) */
-@media (max-width: 599px){
+@media (max-width: 599px) {
     /* Ajustes para el cuerpo */
     body {
         font-size: 16px; /* Aumenta ligeramente el tamaño de la fuente para mejor legibilidad */
+        position: relative; /* Asegura que el footer esté relativo al cuerpo */
+        min-height: 100vh; /* Establece la altura mínima del cuerpo para ocupar toda la pantalla */
+        margin: 0; /* Asegura que no haya ningún margen */
     }
-
 
     /* Ajustes para el contenedor de contenido principal */
     .contenido {
-        padding: 1rem; /* Reduce el padding general */
-        flex-direction: column; /* Organiza los elementos en una columna */
-        align-items: center; /* Centra los elementos */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 50vh;
+        padding-bottom: 100px; /* Asegura que el footer no solape el contenido */
     }
 
     /* Ajustes para las tarjetas */
     .tarjeta {
-        flex-direction: column; /* Cambia la disposición a columna */
+        flex-direction: row; /* Cambia la disposición a columna */
         max-width: 100%; /* La tarjeta ocupa el 100% del ancho del contenedor */
         height: auto; /* Permite que la tarjeta ajuste su altura automáticamente */
         margin: 0.5rem 0; /* Reduce el margen */
+        margin-bottom: 35px;
         border-radius: 4px; /* Reduce el radio de borde */
     }
 
     .img-tarjeta {
-        width: 100%; /* La imagen ocupa todo el ancho disponible */
-        height: 150px; /* Fija una altura menor para la imagen */
+        width: 50%; /* La imagen ocupa todo el ancho disponible */
+        height: 256px; /* Fija una altura menor para la imagen */
     }
 
     .img-tarjeta img {
@@ -252,14 +259,16 @@ footer {
         text-align: left; /* Alinea el texto a la izquierda */
     }
 
-   
-
-    /* Ajustes para el pie de página */
-    footer {
+     /* Ajustes para el pie de página */
+     footer {
+        position: absolute; /* Fija el pie de página en relación al contenedor .contenido */
+        bottom: 0; /* Asegura que esté en la parte inferior */
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
         padding: 0.5rem; /* Reduce el padding */
         font-size: 12px; /* Reduce el tamaño de la fuente */
     }
 }
+
 
 /* Media Query para tablets (600px a 999px) */
 @media (min-width: 600px) and (max-width: 1029px) {
