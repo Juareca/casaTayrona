@@ -1,21 +1,25 @@
+/* Ajustes para el cuerpo */
 body {
-    font-family: Arial, sans-serif;
+    font-size: 16px; /* Aumenta ligeramente el tamaño de la fuente para mejor legibilidad */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos el 100% de la altura de la ventana */
 }
 
 header, footer {
     background-color: rgb(87, 155, 250);
 }
 
+/* Estilo del encabezado */
 header {
     height: 100px;
-    padding: 1rem;
+    padding: 1rem; /* Reducir el espacio de padding */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    position: relative;  
 }
 
 .iconoHome {
@@ -243,10 +247,15 @@ img {
     margin-right: 5px;
 }
 
+/* Ajustes para el pie de página */
 footer {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    padding: 0.5rem; /* Reduce el padding */
+    font-size: 12px; /* Reduce el tamaño de la fuente */
+    background-color: rgb(87, 155, 250); /* Color de fondo del pie de página */
     text-align: center;
-    bottom: 0;
-    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    margin-top: auto; /* Empuja el footer al fondo si el contenido es corto */
 }
 
 .redes-sociales {
@@ -298,6 +307,7 @@ footer {
 }
 
 
+
 /* Media queries para pantallas más pequeñas */
 /* Media query para pantallas más pequeñas */
 @media (max-width: 599px) {
@@ -329,10 +339,24 @@ footer {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 
+    /* Ajustes para el encabezado */
+    header {
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
+        padding: 0.5rem; /* Reduce el padding */
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+        background-color: rgb(87, 155, 250);; /* Color de fondo del encabezado */
+        text-align: center;
+    }
+
     /* Ajustes para el pie de página */
     footer {
-        padding: 0rem; /* Reduce el padding */
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
+        padding: 0.5rem; /* Reduce el padding */
         font-size: 12px; /* Reduce el tamaño de la fuente */
+        background-color: rgb(87, 155, 250); /* Color de fondo del pie de página */
+        text-align: center;
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+        margin-top: auto; /* Empuja el footer al fondo si el contenido es corto */
     }
 }
 

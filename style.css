@@ -1,10 +1,12 @@
 /* Estilo general del cuerpo */
+/* Ajustes para el cuerpo */
 body {
-    font-family: Arial, sans-serif;
+    font-size: 16px; /* Aumenta ligeramente el tamaño de la fuente para mejor legibilidad */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #c3c4c9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos el 100% de la altura de la ventana */
 }
 
 /* Estilo del encabezado */
@@ -14,7 +16,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    position: relative;  
 }
 
 .iconoHome {
@@ -55,8 +57,8 @@ header, footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 1rem;
     margin-top: 20px;
+    width: 100%;
 }
 
 /* Estilo de las tarjetas */
@@ -133,11 +135,15 @@ header, footer{
     color: #000;
 }
 
-/* Estilo del pie de página */
+/* Ajustes para el pie de página */
 footer {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    padding: 0.5rem; /* Reduce el padding */
+    font-size: 12px; /* Reduce el tamaño de la fuente */
+    background-color: rgb(87, 155, 250); /* Color de fondo del pie de página */
     text-align: center;
-    bottom: 0;
-    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    margin-top: auto; /* Empuja el footer al fondo si el contenido es corto */
 }
 
 /* Estilo de la lista de redes sociales */
@@ -191,25 +197,18 @@ footer {
 }
 
 /* Media Queries para diferentes dispositivos */
-
-/* Dispositivos pequeños (menos de 600px) */
 @media (max-width: 599px) {
-    /* Ajustes para el cuerpo */
-    body {
-        font-size: 16px; /* Aumenta ligeramente el tamaño de la fuente para mejor legibilidad */
-        position: relative; /* Asegura que el footer esté relativo al cuerpo */
-        min-height: 100vh; /* Establece la altura mínima del cuerpo para ocupar toda la pantalla */
-        margin: 0; /* Asegura que no haya ningún margen */
-    }
 
     /* Ajustes para el contenedor de contenido principal */
     .contenido {
         display: flex;
+        padding: 20px;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        min-height: 50vh;
-        padding-bottom: 100px; /* Asegura que el footer no solape el contenido */
+        justify-content: space-evenly;
+        flex: 1; /* Permite que el contenedor principal ocupe el espacio restante */
+        width: 100%;
+        box-sizing: border-box;
     }
 
     /* Ajustes para las tarjetas */
@@ -259,70 +258,85 @@ footer {
         text-align: left; /* Alinea el texto a la izquierda */
     }
 
-     /* Ajustes para el pie de página */
-     footer {
-        position: absolute; /* Fija el pie de página en relación al contenedor .contenido */
-        bottom: 0; /* Asegura que esté en la parte inferior */
+    /* Ajustes para el encabezado */
+    header {
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
+        padding: 0.5rem; /* Reduce el padding */
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+        background-color: rgb(87, 155, 250);; /* Color de fondo del encabezado */
+        text-align: center;
+    }
+
+    /* Ajustes para el pie de página */
+    footer {
         width: 100%; /* Ocupa todo el ancho de la pantalla */
         padding: 0.5rem; /* Reduce el padding */
         font-size: 12px; /* Reduce el tamaño de la fuente */
+        background-color: rgb(87, 155, 250); /* Color de fondo del pie de página */
+        text-align: center;
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+        margin-top: auto; /* Empuja el footer al fondo si el contenido es corto */
     }
 }
 
-
-/* Media Query para tablets (600px a 999px) */
+/* Media Query para tablets (600px a 1029px) */
 @media (min-width: 600px) and (max-width: 1029px) {
+
+    body{
+        font-size: 20px;
+    }
+
     .contenido {
         display: flex;
-        padding: 0rem; /* Reduce el padding general */
-        flex-direction: column; /* Organiza los elementos en una columna */
-        align-items: center; /* Centra los elementos */
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 1rem;
+        margin-top: 20px;
     }
 
     .tarjeta {
-        flex: 1 1 70%; /* Permite que las tarjetas ocupen hasta el 70% del ancho del contenedor, ajustándose si es necesario */
-        width: 80%; /* Ajusta el ancho de la tarjeta al 80% del contenedor */
-        height: 300px; /* Establece una altura fija para las tarjetas */
+        flex: 1 1 calc(45% - 2rem); /* Ajusta el tamaño de la tarjeta */
+        max-width: calc(45% - 2rem); /* Ajusta el ancho máximo de la tarjeta */
+        height: 350px; /* Aumenta la altura de la tarjeta */
         margin: 1rem; /* Añade espacio alrededor de cada tarjeta */
-        display: flex; /* Asegura que las tarjetas usen flexbox para organizar sus elementos hijos */
-        flex-direction: row; /* Dispone los elementos hijos en una fila */
+        display: flex; /* Usa flexbox para organizar los elementos */
+        flex-direction: column; /* Dispone los elementos en una columna */
         text-decoration: none; /* Elimina la decoración del texto del enlace */
         background-color: rgb(219, 202, 202); /* Establece el color de fondo de la tarjeta */
         border-radius: 8px; /* Añade bordes redondeados */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade sombra a la tarjeta */
         overflow: hidden; /* Oculta cualquier contenido que exceda los límites de la tarjeta */
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade transiciones suaves para transformaciones y sombras */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade transiciones suaves */
         border: 0.5px solid rgb(131, 127, 127); /* Añade un borde a la tarjeta */
         gap: 0; /* Elimina cualquier espacio entre los elementos hijos de la tarjeta */
         padding: 0; /* Asegura que no haya padding interno en la tarjeta */
     }
 
     .tarjeta:hover {
-        transform: translateY(-5px); /* Mueve la tarjeta hacia arriba ligeramente al pasar el cursor por encima */
+        transform: translateY(-5px); /* Mueve la tarjeta hacia arriba al pasar el cursor */
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra para dar un efecto de elevación */
     }
 
-    /* Ajustes adicionales para los elementos dentro de la tarjeta si es necesario */
     .img-tarjeta {
-        flex: 0 0 auto; /* La imagen no crecerá ni se encogerá, manteniendo su tamaño inicial */
-        width: 50%; /* La imagen ocupará el 50% del ancho de la tarjeta */
-        height: 100%; /* La imagen ocupará toda la altura de la tarjeta */
+        flex: 0 0 auto; /* La imagen no crecerá ni se encogerá */
+        width: 100%; /* La imagen ocupará todo el ancho disponible */
+        height: 50%; /* La imagen ocupará el 50% de la altura de la tarjeta */
         overflow: hidden; /* Oculta cualquier parte de la imagen que exceda los límites del contenedor */
     }
 
     .img-tarjeta img {
         width: 100%; /* La imagen ocupará todo el ancho del contenedor */
         height: 100%; /* La imagen ocupará toda la altura del contenedor */
-        object-fit: cover; /* La imagen se escalará y recortará para llenar el contenedor sin distorsión */
+        object-fit: cover; /* La imagen se escalará y recortará para llenar el contenedor */
     }
 
     .detalles-tarjeta {
         display: flex; /* Usa flexbox para organizar los elementos */
         flex-direction: column; /* Alinea los elementos en una columna */
-        justify-content: space-between; /* Distribuye el espacio disponible entre los elementos */
-        flex: 1 1 50%; /* Permite que el contenedor de detalles crezca para ocupar el 50% del ancho de la tarjeta */
+        justify-content: space-between; /* Distribuye el espacio entre los elementos */
+        flex: 1 1 50%; /* Permite que el contenedor de detalles crezca */
         padding: 1.5rem; /* Añade espacio alrededor del contenido */
-        font-size: 15px; /* Ajusta el tamaño de la fuente para que sea más grande */
+        font-size: 15px; /* Ajusta el tamaño de la fuente */
         color: #333; /* Establece el color del texto */
         gap: 0; /* Elimina cualquier espacio entre los elementos internos */
     }
@@ -347,27 +361,10 @@ footer {
         color: #666; /* Establece el color del texto */
         line-height: 1.5; /* Ajusta la altura de la línea */
     }
-
-    /* Estilo del pie de página */
-    footer {
-        text-align: center;
-        background-color: #5582bd;
-        bottom: 0; /* Fija el footer al borde inferior */
-        width: 100%; /* Ocupa todo el ancho de la pantalla */
-        position: fixed; /* Fija el footer en la parte inferior de la ventana */
-        padding: 1rem 0; /* Añade espacio interno al footer */
-        z-index: 1000; /* Asegura que el footer esté por encima de otros elementos */
-    }
 }
 
 /* Dispositivos grandes (1200px en adelante) */
 @media (min-width: 1030px){
-    .contenido {
-        display: flex; /* Asegura el uso de flexbox */
-        flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea si es necesario */
-        justify-content: space-evenly; /* Distribuye uniformemente los elementos dentro del contenedor */
-        padding: 2rem; /* Añade espacio alrededor del contenido */
-    }
 
     .tarjeta {
         flex: 1 1 45%; /* Permite que las tarjetas ocupen hasta el 45% del ancho del contenedor, ajustándose si es necesario */
@@ -439,15 +436,16 @@ footer {
 
     /* Estilo del pie de página */
     /* Estilo del pie de página */
-footer {
-    text-align: center;
-    background-color: #5582bd;
-    bottom: 0; /* Fija el footer al borde inferior */
-    width: 100%; /* Ocupa todo el ancho de la pantalla */
-    position: fixed; /* Fija el footer en la parte inferior de la ventana */
-    padding: 1rem 0; /* Añade espacio interno al footer */
-    z-index: 1000; /* Asegura que el footer esté por encima de otros elementos */
-}
+    /* Ajustes para el pie de página */
+    footer {
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
+        padding: 0.5rem; /* Reduce el padding */
+        font-size: 12px; /* Reduce el tamaño de la fuente */
+        background-color: rgb(87, 155, 250); /* Color de fondo del pie de página */
+        text-align: center;
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+        margin-top: auto; /* Empuja el footer al fondo si el contenido es corto */
+    }
 }
 
 

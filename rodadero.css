@@ -1,35 +1,39 @@
+/* Ajustes para el cuerpo */
 body {
-    font-family: Arial, sans-serif;
+    font-size: 16px; /* Aumenta ligeramente el tamaño de la fuente para mejor legibilidad */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos el 100% de la altura de la ventana */
 }
 
+header, footer {
+    background-color: rgb(87, 155, 250);
+}
+
+/* Estilo del encabezado */
 header {
     height: 100px;
     padding: 1rem; /* Reducir el espacio de padding */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    position: relative;  
 }
 
 .iconoHome {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra horizontalmente los elementos */
-    text-decoration: none; /* Asegura que el texto no tenga subrayado */
-    color: #333; /* Color del texto */
-    font-size: 16px; /* Tamaño de fuente del texto */
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
 }
 
 .iconoHome span {
     padding-top: 5px;
     color: #333;
-}
-
-header, footer{
-    background-color: rgb(87, 155, 250);
 }
 
 .tituloHeader {
@@ -42,12 +46,11 @@ header, footer{
 
 .tituloHeader img {
     width: 100px;
-    height: 100%; /* Establecer la altura de la imagen al 100% del contenedor */
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 
-/* Estilos del carrusel */
 .carrousel {
     width: 100%;
     margin: 0 auto;
@@ -83,7 +86,7 @@ header, footer{
     justify-content: space-between;
     padding: 20px;
     pointer-events: none;
-    z-index: 1; /* Asegura que las flechas estén por encima de la imagen */
+    z-index: 1;
 }
 
 .itemCarrouselArrows > a {
@@ -116,21 +119,20 @@ header, footer{
     color: grey;
 }
 
-
 .cabeza {
-    display: flex; /* Cambia la disposición a flex */
+    display: flex;
     align-items: center;
-    padding: 0 20px; /* Añade un relleno a los lados para evitar que el contenido toque los bordes de la ventana */
+    padding: 0 20px;
 }
 
 .info {
-    flex: 1; /* Establece la disposición como flex */
-    justify-content: center; /* Centra horizontalmente los elementos */
+    flex: 1;
+    justify-content: center;
 }
 
 .info button {
     margin-bottom: 20px;
-    padding: 10px 20px; /* Ajusta el relleno del botón según sea necesario */
+    padding: 10px 20px;
     background-color: dodgerblue;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -138,7 +140,8 @@ header, footer{
 }
 
 .contenidoDetalles {
-    padding-left: 15px;
+    padding: 20px;
+    padding-top: 20px;
     width: 100%;
     margin: 0 auto;
 }
@@ -146,77 +149,120 @@ header, footer{
 img {
     width: 100%;
     height: 100%;
-    object-fit: scale-down; /* Asegurarse de que la imagen cubra el área */
+    object-fit: scale-down;
+}
+
+.opcionesReservar {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-right: 38px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.opcionesReservar h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.opcionReserva1,
+.opcionReserva2 {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.opcionReserva1 button,
+.opcionReserva2 button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.opcionReserva1 button:hover,
+.opcionReserva2 button:hover {
+    background-color: #0056b3;
 }
 
 .conteServicios {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Centra los elementos horizontalmente */
+    justify-content: flex-start;
 }
 
 .servicio {
-    display: flex;
-    align-items: center; /* Alinea verticalmente los elementos */
-    margin-right: 20px; /* Margen entre los servicios */
-    margin-bottom: 20px; /* Margen inferior entre los servicios */
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .icono {
-    width: 30px; /* Ancho del icono */
-    height: auto; /* Altura automática */
-    margin-right: 10px; /* Margen entre el icono y el texto */
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
 }
 
 .servicio span {
-    font-size: 14px; /* Tamaño del texto */
+    font-size: 14px;
 }
-
 
 .ubicacion {
     display: flex;
     justify-content: space-around;
-    overflow-x: auto; /* Agregar barra de desplazamiento horizontal si es necesario */
+    overflow-x: auto;
     margin-right: 30px;
     padding-bottom: 20px;
 }
 
 .mapa {
     width: 40%;
-    padding: 5px; /* Ajustar el relleno según sea necesario */
-    margin: 0 5px; /* Ajustar el margen entre los elementos */
+    padding: 5px;
+    margin: 0 5px;
     border: 1px solid #000000;
     border-radius: 10px;
     text-align: center;
-    flex-shrink: 0; /* Evitar que los elementos se reduzcan más allá de su tamaño mínimo */
+    flex-shrink: 0;
 }
 
 .mapa a {
     text-decoration: none;
     color: #333;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
 }
 
 .mapa img {
     width: 50px;
-    margin-right: 5px; /* Ajustar el margen derecho de la imagen */
+    margin-right: 5px;
 }
 
-/* Estilo del pie de página */
+/* Ajustes para el pie de página */
 footer {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    padding: 0.5rem; /* Reduce el padding */
+    font-size: 12px; /* Reduce el tamaño de la fuente */
+    background-color: rgb(87, 155, 250); /* Color de fondo del pie de página */
     text-align: center;
-    bottom: 0;
-    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    margin-top: auto; /* Empuja el footer al fondo si el contenido es corto */
 }
 
-/* Estilo de la lista de redes sociales */
 .redes-sociales {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center; /* Centra los elementos horizontalmente */
+    text-align: center;
 }
 
 .redes-sociales li {
@@ -230,8 +276,8 @@ footer {
     color: black;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra los elementos horizontalmente */
-    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center;
+    justify-content: center;
 }
 
 .redes-sociales li i {
@@ -244,7 +290,6 @@ footer {
     color: #333;
 }
 
-/* Colores específicos para los íconos sociales */
 .redes-sociales li:nth-child(1) i {
     color: green;
 }
@@ -260,6 +305,8 @@ footer {
 .redes-sociales li:nth-child(4) i {
     color: blue;
 }
+
+
 
 /* Media queries para pantallas más pequeñas */
 /* Media query para pantallas más pequeñas */
@@ -292,10 +339,24 @@ footer {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 
+    /* Ajustes para el encabezado */
+    header {
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
+        padding: 0.5rem; /* Reduce el padding */
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+        background-color: rgb(87, 155, 250);; /* Color de fondo del encabezado */
+        text-align: center;
+    }
+
     /* Ajustes para el pie de página */
     footer {
-        padding: 0rem; /* Reduce el padding */
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
+        padding: 0.5rem; /* Reduce el padding */
         font-size: 12px; /* Reduce el tamaño de la fuente */
+        background-color: rgb(87, 155, 250); /* Color de fondo del pie de página */
+        text-align: center;
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+        margin-top: auto; /* Empuja el footer al fondo si el contenido es corto */
     }
 }
 
