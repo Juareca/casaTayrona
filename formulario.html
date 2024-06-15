@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Reserva</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+
+    <div class="form-content">
+
+        <h2>Formulario de Reserva</h2>
+
+        <form action="https://formsubmit.co/alberjuan2411@gmail.com" method="POST">
+
+            <!-- Campos ocultos para pasar los parámetros -->
+            <input type="hidden" name="destino" id="destino">
+            <input type="hidden" name="habitaciones" id="habitaciones">
+            <input type="hidden" name="huespedes" id="huespedes">
+            <input type="hidden" name="precio" id="precio">
+
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" required>
+        
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido" id="apellido" required>
+        
+            <label for="email">Correo electrónico</label>
+            <input type="email" name="email" id="email" required>
+        
+            <label for="telefono">Teléfono</label>
+            <input type="text" name="telefono" id="telefono" required>
+        
+            <label for="cantidad-noches">Cantidad de noches</label>
+            <input type="number" name="cantidad-noches" id="cantidad-noches" required>
+
+            <button type="submit">Enviar Reserva</button>
+
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/formulario.html?destino=Betania&habitaciones=2%20habitaciones&huespedes=7%20hu%C3%A9spedes&precio=180000">
+
+            <input type="hidden" name="_captcha" value="false">
+        
+        </form>
+        
+    </div>
+
+    <!-- Script para obtener y establecer los parámetros de la URL -->
+    <script>
+        window.onload = function() {
+            // Obtener los parámetros de la URL
+            const params = new URLSearchParams(window.location.search);
+            const destino = params.get('destino');
+            const habitaciones = params.get('habitaciones');
+            const huespedes = params.get('huespedes');
+            const precio = params.get('precio');
+
+            // Llenar los campos ocultos del formulario
+            document.getElementById('destino').value = destino;
+            document.getElementById('habitaciones').value = habitaciones;
+            document.getElementById('huespedes').value = huespedes;
+            document.getElementById('precio').value = precio;
+        }
+    </script>
+
+</body>
+</html>
