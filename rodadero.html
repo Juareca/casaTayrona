@@ -314,8 +314,8 @@
         <div class="opcionesReservar">
             <h3>Opciones De Reservas</h3>
             <div class="opcionReserva1">
-                1 habitaciones ° max: 4 huéspedes ° $250.000 COP
-                <button>Reservar ahora</button>
+                1 habitación ° max: 4 huéspedes ° $250.000 COP
+                <button class="opcion1" onclick="redirectToForm('Rodadero','1 habitación', '4 huéspedes', '250000')">Reservar ahora</button>
             </div>
         </div>
 
@@ -398,6 +398,14 @@
             </li>
         </ul>
     </footer>
+
+    <!-- Script para redireccionar al formulario con parámetros de reserva -->
+    <script>
+        function redirectToForm(destino, habitaciones, huespedes, precio) {
+            const url = `formulario.html?destino=${encodeURIComponent(destino)}&habitaciones=${encodeURIComponent(habitaciones)}&huespedes=${encodeURIComponent(huespedes)}&precio=${encodeURIComponent(precio)}`;
+            window.location.href = url;
+        }
+    </script>
 
     <script src="apartamentobethania.js"></script>
 
