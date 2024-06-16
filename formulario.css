@@ -1,12 +1,54 @@
+/* Ajustes para el cuerpo */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-size: 16px; /* Aumenta ligeramente el tamaño de la fuente para mejor legibilidad */
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos el 100% de la altura de la ventana */
+}
+
+/* Estilo del encabezado */
+header {
+    height: 100px;
+    padding: 1rem; /* Reducir el espacio de padding */
+    display: flex;
     align-items: center;
-    height: 100vh;
+    justify-content: space-between;
+    position: relative;  
+}
+
+.iconoHome {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente los elementos */
+    text-decoration: none; /* Asegura que el texto no tenga subrayado */
+    color: #333; /* Color del texto */
+    font-size: 16px; /* Tamaño de fuente del texto */
+}
+
+.iconoHome span {
+    padding-top: 5px;
+    color: #333;
+}
+
+header, footer{
+    background-color: rgb(87, 155, 250);
+}
+
+.tituloHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin-right: 43.75px;
+}
+
+.tituloHeader img {
+    width: 100px;
+    height: 100%; /* Establecer la altura de la imagen al 100% del contenedor */
+    margin: 0;
+    padding: 0;
 }
 
 .form-content {
@@ -16,6 +58,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
+    margin: 20px auto; /* Centramos el formulario horizontalmente */
 }
 
 .form-content h2 {
@@ -26,6 +69,8 @@ body {
 form {
     display: flex;
     flex-direction: column;
+    width: calc(100% - 40px); /* Ajusta el ancho del formulario restando los márgenes */
+    margin: 20px; /* Añade un margen alrededor del formulario */
 }
 
 label {
@@ -55,4 +100,103 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+/* Ajustes para el pie de página */
+footer {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    padding: 0.5rem; /* Reduce el padding */
+    font-size: 12px; /* Reduce el tamaño de la fuente */
+    background-color: rgb(87, 155, 250); /* Color de fondo del pie de página */
+    text-align: center;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    margin-top: auto; /* Empuja el footer al fondo si el contenido es corto */
+}
+
+/* Estilo de la lista de redes sociales */
+.redes-sociales {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Centra los elementos horizontalmente */
+}
+
+.redes-sociales li {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+.redes-sociales li a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+}
+
+.redes-sociales li i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.redes-sociales li span {
+    font-size: 12px;
+    color: #333;
+}
+
+/* Colores específicos para los íconos sociales */
+.redes-sociales li:nth-child(1) i {
+    color: green;
+}
+
+.redes-sociales li:nth-child(2) i {
+    color: red;
+}
+
+.redes-sociales li:nth-child(3) i {
+    color: green;
+}
+
+.redes-sociales li:nth-child(4) i {
+    color: blue;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 599px) {
+
+    .form-content {
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    form {
+        width: calc(100% - 20px); /* Ajusta el ancho del formulario restando los márgenes */
+        margin: 10px auto; /* Ajusta el margen alrededor del formulario */
+    }
+
+    .redes-sociales li {
+        margin: 10px;
+    }
+
+    /* Ajustes para el encabezado */
+    header {
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
+        padding: 0.5rem; /* Reduce el padding */
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+        background-color: rgb(87, 155, 250);; /* Color de fondo del encabezado */
+        text-align: center;
+    }
+
+    /* Ajustes para el pie de página */
+    footer {
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
+        padding: 0.5rem; /* Reduce el padding */
+        font-size: 12px; /* Reduce el tamaño de la fuente */
+        background-color: rgb(87, 155, 250); /* Color de fondo del pie de página */
+        text-align: center;
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+        margin-top: auto; /* Empuja el footer al fondo si el contenido es corto */
+    }
 }
