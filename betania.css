@@ -168,7 +168,8 @@ img {
 }
 
 .opcionReserva1,
-.opcionReserva2 {
+.opcionReserva2,
+.opcionReserva3 {
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid #ddd;
@@ -180,7 +181,8 @@ img {
 }
 
 .opcionReserva1 button,
-.opcionReserva2 button {
+.opcionReserva2 button,
+.opcionReserva3 button {
     padding: 10px 15px;
     background-color: #007bff;
     color: #fff;
@@ -190,7 +192,8 @@ img {
 }
 
 .opcionReserva1 button:hover,
-.opcionReserva2 button:hover {
+.opcionReserva2 button:hover,
+.opcionReserva3 button:hover {
     background-color: #0056b3;
 }
 
