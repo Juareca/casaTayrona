@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casa Tayrona</title>
-    <link rel="stylesheet" href="betania.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/betania.css') }}">
     <script src="https://kit.fontawesome.com/adf6f04551.js" crossorigin="anonymous"></script>
 </head>
 
@@ -14,12 +14,12 @@
     
     <!-- Encabezado -->
     <header>
-        <a href="index.html" class="iconoHome"> <!-- Agrega el enlace aquí -->
+        <a href="{{url_for('index')}}" class="iconoHome"> <!-- Agrega el enlace aquí -->
             <i class="fa-solid fa-house"></i>
             <span>Inicio</span>
         </a>
         <div class="tituloHeader">
-            <img src="imgBethania/CASA_TAYRONA-removebg-preview.png" alt="">
+            <img src="{{ url_for('static', filename='img/imgBethania/CASA_TAYRONA-removebg-preview.png') }}" alt="Casa Tayrona">
         </div>
     </header>
 
@@ -34,7 +34,7 @@
         <div class="conteCarrousel">
             <div class="itemCarrousel" id="itemCarrousel-1">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgBethania/imgAjustadas/IMG-20240601-WA0000.png" alt="">
+                    <img src="{{ url_for('static', filename='img/imgBethania/imgAjustadas/IMG-20240601-WA0000.png') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-15')">
@@ -48,7 +48,7 @@
             
             <div class="itemCarrousel" id="itemCarrousel-2">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgBethania/IMG-20240601-WA0001.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgBethania/imgAjustadas/IMG-20240601-WA0002.png') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-1')">
@@ -62,7 +62,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-3">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgBethania/imgAjustadas/IMG-20240601-WA0002.png" alt="">
+                    <img src="{{ url_for('static', filename='img/imgBethania/imgAjustadas/IMG-20240601-WA0003.png') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-2')">
@@ -76,7 +76,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-4">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgBethania/imgAjustadas/IMG-20240601-WA0003.png" alt="">
+                    <img src="{{ url_for('static', filename='img/imgBethania/imgAjustadas/IMG-20240601-WA0004.png') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-3')">
@@ -90,7 +90,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-5">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgBethania/imgAjustadas/IMG-20240601-WA0004.png" alt="">
+                    <img src="{{ url_for('static', filename='img/imgBethania/imgAjustadas/IMG-20240601-WA0006.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-4')">
@@ -104,7 +104,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-7">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgBethania/imgAjustadas/IMG-20240601-WA0014.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgBethania/imgAjustadas/IMG-20240601-WA0014.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-5')">
@@ -118,7 +118,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-8">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgBethania/imgAjustadas/IMG-20240601-WA0007.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgBethania/imgAjustadas/IMG-20240601-WA0007.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-7')">
@@ -132,7 +132,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-9">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgBethania/imgAjustadas/IMG-20240601-WA0008.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgBethania/imgAjustadas/IMG-20240601-WA0008.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-8')">
@@ -146,7 +146,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-10">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgBethania/imgAjustadas/IMG-20240601-WA0009.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgBethania/imgAjustadas/IMG-20240601-WA0009.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-9')">
@@ -160,7 +160,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-11">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgBethania/imgAjustadas/IMG-20240601-WA0010.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgBethania/imgAjustadas/IMG-20240601-WA0010.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-10')">
@@ -174,7 +174,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-12">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgBethania/imgAjustadas/IMG-20240601-WA0011.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgBethania/imgAjustadas/IMG-20240601-WA0011.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-11')">
@@ -188,7 +188,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-13">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgBethania/imgAjustadas/IMG-20240601-WA0012.png" alt="">
+                    <img src="{{ url_for('static', filename='img/imgBethania/imgAjustadas/IMG-20240601-WA0012.png') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-12')">
@@ -202,24 +202,10 @@
 
             <div class="itemCarrousel" id="itemCarrousel-14">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgBethania/imgAjustadas/IMG-20240601-WA0006.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgBethania/imgAjustadas/IMG-20240601-WA0013.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-13')">
-                        <i class="fas fa-chevron-left"></i>
-                    </a>
-                    <a onclick="cambiarImagen('itemCarrousel-15')">
-                        <i class="fas fa-chevron-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="itemCarrousel" id="itemCarrousel-15">
-                <div class="itemCarrouselTarjeta">
-                    <img src="imgBethania/imgAjustadas/IMG-20240601-WA0013.jpg" alt="">
-                </div>
-                <div class="itemCarrouselArrows">
-                    <a onclick="cambiarImagen('itemCarrousel-14')">
                         <i class="fas fa-chevron-left"></i>
                     </a>
                     <a onclick="cambiarImagen('itemCarrousel-1')">
@@ -227,7 +213,6 @@
                     </a>
                 </div>
             </div>
-
         </div>
 
         <div class="conteCarrouselController">
@@ -244,7 +229,6 @@
             <a onclick="cambiarImagen('itemCarrousel-12')">•</a>
             <a onclick="cambiarImagen('itemCarrousel-13')">•</a>
             <a onclick="cambiarImagen('itemCarrousel-14')">•</a>
-            <a onclick="cambiarImagen('itemCarrousel-15')">•</a>
 
         </div>     
     </div>
@@ -253,42 +237,56 @@
 
         <div class="opcionesReservar">
             <h3>Opciones De Reservas</h3>
-            <!--Aqui puedes colocar otro div llamado <div class="opcionReserva1">-->
+        
             <div class="opcionReserva2">
-                2 habitaciones ° max: 7 huéspedes ° <Strong>180.000 COP</Strong>$
-                <button class="opcion1" onclick="redirectToForm('Betania','2 habitaciones', '7 huéspedes', '180.000 COP')">Reservar ahora</button>
+                2 habitaciones ° max: 7 huéspedes ° <strong>$180.000 COP</strong>
+                <form action="{{ url_for('formulario') }}" method="GET">
+                    <input type="hidden" name="destino" value="Betania">
+                    <input type="hidden" name="habitaciones" value="2 habitaciones">
+                    <input type="hidden" name="huespedes" value="7 huéspedes">
+                    <input type="hidden" name="precio" value="180.000 COP">
+                    <button type="submit" class="opcion1">Reservar ahora</button>
+                </form>
             </div>
+        
             <div class="opcionReserva3">
-                3 habitaciones ° max: 10 huéspedes ° <Strong>$230.000 COP</Strong>
-                <button class="opcion2" onclick="redirectToForm('Betania','3 habitaciones', '10 huéspedes', '230000 COP')">Reservar ahora</button>
+                3 habitaciones ° max: 10 huéspedes ° <strong>$230.000 COP</strong>
+                <form action="{{ url_for('formulario') }}" method="GET">
+                    <input type="hidden" name="destino" value="Betania">
+                    <input type="hidden" name="habitaciones" value="3 habitaciones">
+                    <input type="hidden" name="huespedes" value="10 huéspedes">
+                    <input type="hidden" name="precio" value="230000 COP">
+                    <button type="submit" class="opcion2">Reservar ahora</button>
+                </form>
             </div>
         </div>
+        
 
         <h3>Servicios</h3>
 
         <div class="conteServicios">
             <div class="servicio">
-                <img src="icons/percha.png" alt="" class="icono">
+                <img src="{{ url_for('static', filename='icons/percha.png') }}" alt="" class="icono">
                 <span>Closet</span>
             </div>
         
             <div class="servicio">
-                <img src="icons/aire-acondicionado.png" alt="" class="icono">
+                <img src="{{ url_for('static', filename='icons/aire-acondicionado.png') }}" alt="" class="icono">
                 <span>Aire Acondicionado</span>
             </div>
         
             <div class="servicio">
-                <img src="icons/smart-tv.png" alt="" class="icono">
+                <img src="{{ url_for('static', filename='icons/smart-tv.png') }}" alt="" class="icono">
                 <span>Smart TV</span>
             </div>
         
             <div class="servicio">
-                <img src="icons/wifi.png" alt="" class="icono">
+                <img src="{{ url_for('static', filename='icons/wifi.png') }}" alt="" class="icono">
                 <span>WiFi</span>
             </div>
         
             <div class="servicio">
-                <img src="icons/terraza.png" alt="" class="icono">
+                <img src="{{ url_for('static', filename='icons/terraza.png') }}" alt="" class="icono">
                 <span>Terraza</span>
             </div>
         </div>
@@ -298,13 +296,14 @@
         <div class="ubicacion">
             <div class="mapa">
                 <a href="https://www.waze.com/ul?ll=11.2502682,-74.1954815&navigate=yes">
-                    <img src="icons/waze.png" alt="Waze">
+                    <img src="{{ url_for('static', filename='icons/waze.png') }}" alt="Waze">
                     <span>Abrir en Waze</span>
                 </a>
             </div>
+            
             <div class="mapa">
                 <a href="https://www.google.com/maps/search/?api=1&query=11.2502682,-74.1954815">
-                    <img src="icons/maps-and-location.png" alt="Google Maps">
+                    <img src="{{ url_for('static', filename='icons/maps-and-location.png') }}" alt="Google Maps">
                     <span>Abrir en Google Maps</span>
                 </a>
             </div>
@@ -349,7 +348,8 @@
         }
     </script>
 
-    <script src="apartamentobethania.js"></script>
+    <!-- Incluir tu script JavaScript personalizado -->
+    <script src="{{ url_for('static', filename='js/apartamentobethania.js') }}"></script>
 
 </body>
 </html>

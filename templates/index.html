@@ -1,33 +1,57 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casa Tayrona Hostal</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="https://kit.fontawesome.com/adf6f04551.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('formulario');
 
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                // Recoge los datos del formulario
+                const formData = new FormData(form);
+
+                // Envía los datos al servidor usando fetch
+                fetch('/formulario', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('¡Reserva realizada con éxito!');
+                    } else {
+                        alert('Error al procesar la reserva. Por favor, intenta nuevamente.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error al enviar la reserva. Por favor, intenta nuevamente más tarde.');
+                });
+            });
+        });
+    </script>
 </head>
-
 <body>
-
     <header>
-        <a href="index.html" class="iconoHome"> <!-- Agrega el enlace aquí -->
+        <a href="{{ url_for('index') }}" class="iconoHome">
             <i class="fa-solid fa-house"></i>
             <span>Inicio</span>
         </a>
         <div class="tituloHeader">
-            <img src="imgBethania/CASA_TAYRONA-removebg-preview.png" alt="">
+            <img src="{{ url_for('static', filename='img/imgBethania/CASA_TAYRONA-removebg-preview.png') }}" alt="Casa Tayrona">
         </div>
     </header>
-
+    
     <div class="contenido">
-
-        <a href="betania.html" class="tarjeta">
+        <a href="{{ url_for('betania') }}" class="tarjeta">
             <div class="img-tarjeta">
-                <img src="imgBethania/IMG-20240601-WA0000.jpg" alt="Apartamento 1">
+                <img src="{{ url_for('static', filename='img/imgBethania/IMG-20240601-WA0000.jpg') }}" alt="Apartamento 1">
             </div>
             <div class="detalles-tarjeta">
                 <h2>Apartamento Betania</h2>
@@ -38,9 +62,9 @@
             </div>
         </a>
         
-        <a href="rodadero.html" class="tarjeta">
+        <a href="{{ url_for('rodadero') }}" class="tarjeta">
             <div class="img-tarjeta">
-                <img src="imgRodacho/IMG-20240601-WA0001.jpg" alt="Apartamento 2">
+                <img src="{{ url_for('static', filename='img/imgRodacho/IMG-20240601-WA0001.jpg') }}" alt="Apartamento 2">
             </div>
             <div class="detalles-tarjeta">
                 <h2>Apartamento Rodadero</h2>
@@ -50,42 +74,35 @@
                 <p><strong>200.000 COP</strong></p>
             </div>
         </a> 
-
     </div>
     
     <footer>
         <ul class="redes-sociales">
-
             <li>
                 <a href="tel:+573218292862">
                     <i class="fas fa-phone"></i>
                     <span>Llamar</span>
                 </a>
             </li>
-
             <li>
                 <a href="https://www.instagram.com/casatayronahostal?igsh=djZ1MnBhcW4wdTRq" target="_blank">
                     <i class="fab fa-instagram"></i>
                     <span>Instagram</span>
                 </a>
             </li>
-
             <li>
                 <a href="https://wa.me/3218292862" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                     <span>WhatsApp</span>
                 </a>
             </li>
-
             <li>
                 <a href="https://www.facebook.com/profile.php?id=100094050537060" target="_blank">
                     <i class="fab fa-facebook"></i>
                     <span>Facebook</span>
                 </a>
             </li>
-            
         </ul>
     </footer>
-
 </body>
 </html>
