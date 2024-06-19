@@ -6,36 +6,6 @@
     <title>Casa Tayrona Hostal</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="https://kit.fontawesome.com/adf6f04551.js" crossorigin="anonymous"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('formulario');
-
-            form.addEventListener('submit', function(event) {
-                event.preventDefault();
-
-                // Recoge los datos del formulario
-                const formData = new FormData(form);
-
-                // Envía los datos al servidor usando fetch
-                fetch('/formulario', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        alert('¡Reserva realizada con éxito!');
-                    } else {
-                        alert('Error al procesar la reserva. Por favor, intenta nuevamente.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('Error al enviar la reserva. Por favor, intenta nuevamente más tarde.');
-                });
-            });
-        });
-    </script>
 </head>
 <body>
     <header>
