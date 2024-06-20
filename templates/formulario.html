@@ -23,17 +23,6 @@
 
     <h2>Formulario de Reserva</h2>
 
-    <!-- Mostrar la alerta -->
-    {% if reserva_exitosa == True %}
-    <div class="alert-success">
-        Reserva realizada con éxito.
-    </div>
-    {% elif reserva_exitosa == False %}
-    <div class="alert-error">
-        Error al procesar la reserva. Por favor, intenta nuevamente.
-    </div>
-    {% endif %}
-
     <form action="{{ url_for('formulario') }}" method="POST">
 
         <!-- Campos ocultos para pasar los parámetros -->
@@ -49,7 +38,7 @@
         <input type="text" name="apellido" id="apellido" required>
     
         <label for="email">Correo electrónico</label>
-        <input type="email" name="email" id="email" required>
+        <input type="email" name="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
     
         <label for="telefono">Teléfono</label>
         <input type="text" name="telefono" id="telefono" required>
