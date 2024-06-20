@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casa Tayrona</title>
-    <link rel="stylesheet" href="betania.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/rodadero.css') }}">
     <script src="https://kit.fontawesome.com/adf6f04551.js" crossorigin="anonymous"></script>
 </head>
 
@@ -12,12 +12,12 @@
     
     <!-- Encabezado -->
     <header>
-        <a href="index.html" class="iconoHome"> <!-- Agrega el enlace aquí -->
+        <a href="{{url_for('index')}}" class="iconoHome"> <!-- Agrega el enlace aquí -->
             <i class="fa-solid fa-house"></i>
             <span>Inicio</span>
         </a>
         <div class="tituloHeader">
-            <img src="imgBethania/CASA_TAYRONA-removebg-preview.png" alt="">
+            <img src="{{ url_for('static', filename='img/imgBethania/CASA_TAYRONA-removebg-preview.png') }}" alt="Casa Tayrona">
         </div>
     </header>
 
@@ -31,9 +31,10 @@
         </div>
 
         <div class="conteCarrousel">
+
             <div class="itemCarrousel" id="itemCarrousel-1">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgRodacho/IMG-20240601-WA0001.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgRodacho/IMG-20240601-WA0001.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-18')">
@@ -47,25 +48,24 @@
             
             <div class="itemCarrousel" id="itemCarrousel-2">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgRodacho/IMG-20240601-WA0002.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgRodacho/IMG-20240601-WA0002.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-1')">
                         <i class="fas fa-chevron-left"></i>
                     </a>
-                    <a onclick="cambiarImagen('itemCarrousel-3')">
+                    <a onclick="cambiarImagen('itemCarrousel-4')">
                         <i class="fas fa-chevron-right"></i>
                     </a>
                 </div>
             </div>
 
-
             <div class="itemCarrousel" id="itemCarrousel-4">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgRodacho/IMG-20240601-WA0004.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgRodacho/IMG-20240601-WA0004.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
-                    <a onclick="cambiarImagen('itemCarrousel-3')">
+                    <a onclick="cambiarImagen('itemCarrousel-2')">
                         <i class="fas fa-chevron-left"></i>
                     </a>
                     <a onclick="cambiarImagen('itemCarrousel-5')">
@@ -76,7 +76,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-5">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgRodacho/IMG-20240601-WA0005.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgRodacho/IMG-20240601-WA0005.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-4')">
@@ -90,7 +90,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-7">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgRodacho/IMG-20240601-WA0007.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgRodacho/IMG-20240601-WA0007.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-5')">
@@ -104,7 +104,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-8">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgRodacho/IMG-20240601-WA0008.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgRodacho/IMG-20240601-WA0008.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-7')">
@@ -118,7 +118,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-9">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgRodacho/IMG-20240601-WA0009.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgRodacho/IMG-20240601-WA0009.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-8')">
@@ -132,7 +132,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-10">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgRodacho/IMG-20240601-WA0010.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgRodacho/IMG-20240601-WA0010.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-9')">
@@ -146,7 +146,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-11">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgRodacho/IMG-20240601-WA0011.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgRodacho/IMG-20240601-WA0011.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-10')">
@@ -160,7 +160,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-12">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgRodacho/IMG-20240601-WA0012.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgRodacho/IMG-20240601-WA0012.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-11')">
@@ -174,7 +174,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-13">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgRodacho/IMG-20240601-WA0013.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgRodacho/IMG-20240601-WA0013.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-12')">
@@ -188,7 +188,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-14">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgRodacho/IMG-20240601-WA0014.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgRodacho/IMG-20240601-WA0014.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-13')">
@@ -202,7 +202,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-15">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgRodacho/IMG-20240601-WA0015.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgRodacho/IMG-20240601-WA0015.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-14')">
@@ -216,7 +216,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-16">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgRodacho/IMG-20240601-WA0016.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgRodacho/IMG-20240601-WA0016.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-15')">
@@ -230,7 +230,7 @@
 
             <div class="itemCarrousel" id="itemCarrousel-17">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgRodacho/IMG-20240601-WA0017.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgRodacho/IMG-20240601-WA0017.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-16')">
@@ -244,24 +244,10 @@
 
             <div class="itemCarrousel" id="itemCarrousel-18">
                 <div class="itemCarrouselTarjeta">
-                    <img src="imgRodacho/IMG-20240601-WA0018.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/imgRodacho/IMG-20240601-WA0018.jpg') }}" alt="">
                 </div>
                 <div class="itemCarrouselArrows">
                     <a onclick="cambiarImagen('itemCarrousel-17')">
-                        <i class="fas fa-chevron-left"></i>
-                    </a>
-                    <a onclick="cambiarImagen('itemCarrousel-19')">
-                        <i class="fas fa-chevron-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="itemCarrousel" id="itemCarrousel-19">
-                <div class="itemCarrouselTarjeta">
-                    <img src="imgRodacho/IMG-20240601-WA0019.jpg" alt="">
-                </div>
-                <div class="itemCarrouselArrows">
-                    <a onclick="cambiarImagen('itemCarrousel-18')">
                         <i class="fas fa-chevron-left"></i>
                     </a>
                     <a onclick="cambiarImagen('itemCarrousel-1')">
@@ -289,7 +275,6 @@
             <a onclick="cambiarImagen('itemCarrousel-16')">•</a>
             <a onclick="cambiarImagen('itemCarrousel-17')">•</a>
             <a onclick="cambiarImagen('itemCarrousel-18')">•</a>
-            <a onclick="cambiarImagen('itemCarrousel-19')">•</a>
 
         </div>
         
@@ -299,61 +284,66 @@
 
         <div class="opcionesReservar">
             <h3>Opciones De Reservas</h3>
+            
             <div class="opcionReserva1">
                 1 habitación ° max: 4 huéspedes ° $250.000 COP
-                <button class="opcion1" onclick="redirectToForm('Rodadero','1 habitación', '4 huéspedes', '250000')">Reservar ahora</button>
+                <form action="{{ url_for('formulario') }}" method="GET">
+                    <input type="hidden" name="destino" value="Betania">
+                    <input type="hidden" name="habitaciones" value="1 habitaciones">
+                    <input type="hidden" name="huespedes" value="4 huéspedes">
+                    <input type="hidden" name="precio" value="250.000 COP">
+                    <button type="submit" class="opcion1">Reservar ahora</button>
+                </form>
             </div>
         </div>
-
+    
         <h3>Servicios</h3>
-
+    
         <div class="conteServicios">
             <div class="servicio">
-                <img src="icons/percha.png" alt="" class="icono">
+                <img src="{{ url_for('static', filename='icons/percha.png') }}" alt="" class="icono">
                 <span>Closet</span>
             </div>
-        
+    
             <div class="servicio">
-                <img src="icons/aire-acondicionado.png" alt="" class="icono">
+                <img src="{{ url_for('static', filename='icons/aire-acondicionado.png') }}" alt="" class="icono">
                 <span>Aire Acondicionado</span>
             </div>
-        
+    
             <div class="servicio">
-                <img src="icons/smart-tv.png" alt="" class="icono">
+                <img src="{{ url_for('static', filename='icons/smart-tv.png') }}" alt="" class="icono">
                 <span>Smart TV</span>
             </div>
-        
+    
             <div class="servicio">
-                <img src="icons/wifi.png" alt="" class="icono">
+                <img src="{{ url_for('static', filename='icons/wifi.png') }}" alt="" class="icono">
                 <span>WiFi</span>
             </div>
-        
+    
             <div class="servicio">
-                <img src="icons/terraza.png" alt="" class="icono">
+                <img src="{{ url_for('static', filename='icons/terraza.png') }}" alt="" class="icono">
                 <span>Terraza</span>
             </div>
         </div>
-       
-
+    
         <h3>Como llegar</h3>
-
+    
         <div class="ubicacion">
             <div class="mapa">
                 <a href="https://www.waze.com/ul?ll=11.1941386,-74.2295733&navigate=yes">
-                    <img src="icons/waze.png" alt="Waze">
+                    <img src="{{ url_for('static', filename='icons/waze.png') }}" alt="Waze">
                     <span>Abrir en Waze</span>
                 </a>
             </div>
             <div class="mapa">
                 <a href="https://www.google.com/maps/search/?api=1&query=11.1941386,-74.2295733">
-                    <img src="icons/maps-and-location.png" alt="Google Maps">
+                    <img src="{{ url_for('static', filename='icons/maps-and-location.png') }}" alt="Google Maps">
                     <span>Abrir en Google Maps</span>
                 </a>
             </div>
-            
         </div>
     </div>
-
+    
     <footer>
         <ul class="redes-sociales">
             <li>
@@ -362,21 +352,21 @@
                     <span>Llamar</span>
                 </a>
             </li>
-
+    
             <li>
                 <a href="https://www.instagram.com/casatayronahostal?igsh=djZ1MnBhcW4wdTRq" target="_blank">
                     <i class="fab fa-instagram"></i>
                     <span>Instagram</span>
                 </a>
             </li>
-
+    
             <li>
                 <a href="https://wa.me/3218292862" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                     <span>WhatsApp</span>
                 </a>
             </li>
-
+    
             <li>
                 <a href="https://www.facebook.com/profile.php?id=100094050537060" target="_blank">
                     <i class="fab fa-facebook"></i>
@@ -385,6 +375,7 @@
             </li>
         </ul>
     </footer>
+    
 
     <!-- Script para redireccionar al formulario con parámetros de reserva -->
     <script>
@@ -394,7 +385,16 @@
         }
     </script>
 
-    <script src="apartamentobethania.js"></script>
+    <!-- Script para redireccionar al formulario con parámetros de reserva -->
+    <script>
+        function redirectToForm(destino, habitaciones, huespedes, precio) {
+            const url = `formulario.html?destino=${encodeURIComponent(destino)}&habitaciones=${encodeURIComponent(habitaciones)}&huespedes=${encodeURIComponent(huespedes)}&precio=${encodeURIComponent(precio)}`;
+            window.location.href = url;
+        }
+    </script>
+
+    <!-- Incluir tu script JavaScript personalizado -->
+    <script src="{{ url_for('static', filename='js/apartamentobethania.js') }}"></script>
 
 </body>
 </html>
