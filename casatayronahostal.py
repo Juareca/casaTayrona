@@ -12,6 +12,7 @@ smtp_password = "BNXVglCvJkFqftPcEmKqENsg7eMxd1Lub3uWHbdp/QsL"
 smtp_server = "email-smtp.sa-east-1.amazonaws.com"
 smtp_port = 587
 smtp_verified_email = "alberjuan2411@gmail.com"
+smtp_verified_casatayrona = "casatayrona17@gmail.com"
 
 @app.route('/')
 def index():
@@ -41,7 +42,7 @@ def formulario():
         cantidad_noches = request.form.get('cantidad-noches')
 
         # Construir el cuerpo del mensaje
-        email_body = f'''Hola,
+        email_body = f'''
 
         Se ha recibido una nueva reserva desde el formulario de Casa Tayrona:
 
@@ -54,21 +55,21 @@ def formulario():
         Huéspedes: {huespedes}
         Precio: {precio}
 
-        Gracias.'''
+        '''
 
         # Enviar correo usando SES
         try:
             msg = MIMEMultipart()
             msg['From'] = smtp_verified_email
-            msg['To'] = smtp_verified_email
-            msg['Subject'] = "Nueva reserva desde Casa Tayrona"
+            msg['To'] = smtp_verified_casatayrona
+            msg['Subject'] = f'''{nombre} {apellido}'''" ha reservado desde casatayrona.com"
 
             msg.attach(MIMEText(email_body, 'plain'))
 
             server = smtplib.SMTP(smtp_server, smtp_port)
             server.starttls()  # Iniciar TLS para encriptar la conexión
             server.login(smtp_username, smtp_password)
-            server.sendmail(smtp_verified_email, smtp_verified_email, msg.as_string())
+            server.sendmail(smtp_verified_email, smtp_verified_casatayrona, msg.as_string())
             server.quit()
 
             reserva_exitosa = True
