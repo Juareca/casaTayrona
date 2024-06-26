@@ -6,10 +6,19 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Asegura que el cuerpo ocupe al menos el 100% de la altura de la ventana */
+    overflow-x: hidden; /* Oculta cualquier contenido desbordante horizontalmente */
+    box-sizing: border-box;
 }
 
 header, footer {
     background-color: rgb(87, 155, 250);
+}
+
+/* Asegura que todos los elementos utilicen box-sizing: border-box */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
 /* Estilo del encabezado */
@@ -93,13 +102,12 @@ header {
     pointer-events: auto;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
-    margin-right: 40px;
     border-radius: 50%;
 }
 
 .itemCarrouselArrows > a > i {
     color: white;
-    font-size: 2.5em;
+    font-size: 3.5em;
 }
 
 .itemCarrouselArrows > a > i:hover {
@@ -155,11 +163,9 @@ img {
 .opcionesReservar {
     border: 1px solid #ddd;
     padding: 10px;
-    margin-right: 38px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
 }
 
 .opcionesReservar h3 {
@@ -170,7 +176,6 @@ img {
 .opcionReserva1,
 .opcionReserva2 {
     margin-bottom: 15px;
-    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #f4f4f4;
@@ -220,8 +225,6 @@ img {
     display: flex;
     justify-content: space-around;
     overflow-x: auto;
-    margin-right: 30px;
-    padding-bottom: 20px;
 }
 
 .mapa {
