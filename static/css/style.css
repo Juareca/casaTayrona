@@ -6,6 +6,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Asegura que el cuerpo ocupe al menos el 100% de la altura de la ventana */
+    overflow-x: hidden; /* Oculta cualquier contenido desbordante horizontalmente */
+    box-sizing: border-box;
 }
 
 /* Estilo del encabezado */
