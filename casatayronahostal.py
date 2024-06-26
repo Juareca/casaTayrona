@@ -43,7 +43,7 @@ def formulario():
 
         # Construir el cuerpo del mensaje
         email_body = f'''
-
+        
         Se ha recibido una nueva reserva desde el formulario de Casa Tayrona:
 
         Nombre: {nombre} {apellido}
