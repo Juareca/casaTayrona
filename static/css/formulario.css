@@ -6,16 +6,16 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Asegura que el cuerpo ocupe al menos el 100% de la altura de la ventana */
+    height: 100vh;
 }
 
 /* Estilo del encabezado */
 header {
-    height: 100px;
-    padding: 1rem; /* Reducir el espacio de padding */
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;  
+    position: relative; 
 }
 
 .iconoHome {
@@ -23,17 +23,19 @@ header {
     flex-direction: column;
     align-items: center; /* Centra horizontalmente los elementos */
     text-decoration: none; /* Asegura que el texto no tenga subrayado */
-    color: #333; /* Color del texto */
-    font-size: 16px; /* Tamaño de fuente del texto */
+    color: rgb(211, 195, 185); /* Color del texto */
+    font-size: 22px; /* Tamaño de fuente del texto */
+    margin-left: 10px;
 }
 
 .iconoHome span {
     padding-top: 5px;
-    color: #333;
+    color: rgb(211, 195, 185);
+    font-size: 18px;
 }
 
 header, footer{
-    background-color: rgb(87, 155, 250);
+    background-color: rgb(0, 77, 64);
 }
 
 .tituloHeader {
@@ -49,21 +51,31 @@ header, footer{
     height: 100%; /* Establecer la altura de la imagen al 100% del contenedor */
     margin: 0;
     padding: 0;
+    padding-right: 10px; 
 }
 
+/* Estilos del formulario */
 .form-content {
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255);
     padding: 20px;
+    margin: 0px auto;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    width: 80%;
+    max-width: 600px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    margin: 20px auto; /* Centramos el formulario horizontalmente */
 }
 
 .form-content h2 {
     text-align: center;
-    margin-bottom: 20px;
+    color: rgb(0, 77, 64);
+}
+
+.form-content label {
+    display: block;
+    margin: 10px 0 5px;
+    color: rgb(0, 77, 64);
 }
 
 form {
@@ -74,28 +86,32 @@ form {
 }
 
 label {
-    margin-bottom: 5px;
     font-weight: bold;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="number"] {
+    width: auto;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    border: 1px solid rgb(0, 77, 64);
     border-radius: 5px;
-    font-size: 16px;
 }
 
-button {
+#cantidad-noches{
+    margin-bottom: 30px;
+}
+
+.form-content button {
+    width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: rgb(0, 77, 64);
     color: white;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 16px;
+    cursor: pointer;
 }
 
 button:hover {
@@ -104,13 +120,10 @@ button:hover {
 
 /* Ajustes para el pie de página */
 footer {
-    width: 100%; /* Ocupa todo el ancho de la pantalla */
-    padding: 0.5rem; /* Reduce el padding */
-    font-size: 12px; /* Reduce el tamaño de la fuente */
-    background-color: rgb(87, 155, 250); /* Color de fondo del pie de página */
+    padding: 5px;
     text-align: center;
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-    margin-top: auto; /* Empuja el footer al fondo si el contenido es corto */
+    box-sizing: border-box;
+    margin-top: auto;
 }
 
 /* Estilo de la lista de redes sociales */
@@ -118,32 +131,41 @@ footer {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center; /* Centra los elementos horizontalmente */
+    text-align: center;
+    white-space: nowrap; /* Evita el salto de línea en los elementos */
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
 }
 
 .redes-sociales li {
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
+    margin-top: 15px;
+}
+
+/* Ajustes para el primer y último elemento */
+.redes-sociales li:first-child {
+    margin-left: 10px; /* Margen izquierdo más pequeño para el primer elemento */
+}
+
+.redes-sociales li:last-child {
+    margin-right: 10px; /* Margen derecho más pequeño para el último elemento */
 }
 
 .redes-sociales li a {
     text-decoration: none;
-    color: black;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra los elementos horizontalmente */
-    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center;
+    justify-content: center;
 }
 
 .redes-sociales li i {
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 5px;
 }
 
 .redes-sociales li span {
-    font-size: 12px;
-    color: #333;
+    font-size: 18px;
+    color: rgb(211, 195, 185);
 }
 
 /* Colores específicos para los íconos sociales */
@@ -166,38 +188,4 @@ footer {
 /* Media Query para pantallas pequeñas */
 @media (max-width: 599px) {
 
-    .form-content {
-        padding: 15px;
-        margin: 10px auto;
-    }
-
-    form {
-        width: calc(100% - 20px); /* Ajusta el ancho del formulario restando los márgenes */
-        margin: 10px auto; /* Ajusta el margen alrededor del formulario */
-    }
-
-    .redes-sociales li {
-        margin: 10px;
-    }
-
-    /* Ajustes para el encabezado */
-    /* Ajustes para el encabezado */
-    header {
-        width: 100%; /* Ocupa todo el ancho de la pantalla */
-        padding: 0.5rem; /* Reduce el padding */
-        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-        background-color: rgb(87, 155, 250);; /* Color de fondo del encabezado */
-        text-align: center;
-    }
-
-    /* Ajustes para el pie de página */
-    footer {
-        width: 100%; /* Ocupa todo el ancho de la pantalla */
-        padding: 0.5rem; /* Reduce el padding */
-        font-size: 12px; /* Reduce el tamaño de la fuente */
-        background-color: rgb(87, 155, 250); /* Color de fondo del pie de página */
-        text-align: center;
-        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-        margin-top: auto; /* Empuja el footer al fondo si el contenido es corto */
-    }
 }

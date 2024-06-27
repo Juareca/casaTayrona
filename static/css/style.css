@@ -1,5 +1,6 @@
 /* Ajustes para el cuerpo */
 body {
+    background-color: rgb(152, 190, 228);
     font-size: 16px; /* Aumenta ligeramente el tamaño de la fuente para mejor legibilidad */
     margin: 0;
     padding: 0;
@@ -12,12 +13,11 @@ body {
 
 /* Estilo del encabezado */
 header {
-    height: 100px;
-    padding: 1rem; /* Reducir el espacio de padding */
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;  
+    position: relative; 
 }
 
 .iconoHome {
@@ -25,17 +25,19 @@ header {
     flex-direction: column;
     align-items: center; /* Centra horizontalmente los elementos */
     text-decoration: none; /* Asegura que el texto no tenga subrayado */
-    color: #333; /* Color del texto */
-    font-size: 16px; /* Tamaño de fuente del texto */
+    color: rgb(211, 195, 185); /* Color del texto */
+    font-size: 22px; /* Tamaño de fuente del texto */
+    margin-left: 10px;
 }
 
 .iconoHome span {
     padding-top: 5px;
-    color: #333;
+    color: rgb(211, 195, 185);
+    font-size: 18px;
 }
 
 header, footer{
-    background-color: rgb(87, 155, 250);
+    background-color: rgb(0, 77, 64);
 }
 
 .tituloHeader {
@@ -51,6 +53,7 @@ header, footer{
     height: 100%; /* Establecer la altura de la imagen al 100% del contenedor */
     margin: 0;
     padding: 0;
+    padding-right: 10px; 
 }
 
 /* Estilo del contenedor de contenido principal */
@@ -58,27 +61,22 @@ header, footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-top: 20px;
     width: 100%;
 }
 
 /* Estilo de las tarjetas */
 .tarjeta {
     display: flex;
-    flex-direction: row; /* Distribuye los elementos en una fila */
+    flex-direction: row;
     text-decoration: none;
-    background-color: rgb(219, 202, 202);
-    border-radius: 8px;
+    background-color: rgb(202, 223, 211);
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 100%;
-    max-width: 600px;
-    height: 200px;
-    margin: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 0.5px solid rgb(131, 127, 127);
-    gap: 0; /* Elimina cualquier espacio entre los elementos flex hijos */
-    padding: 0; /* Asegura que no haya padding interno */
+    border: 2px solid rgb(131, 127, 127);    
+}
+.tarjeta:first-child{
+    margin-bottom: 20px;
 }
 
 .tarjeta:hover {
@@ -88,10 +86,12 @@ header, footer{
 
 /* Estilo de la imagen dentro de la tarjeta */
 .img-tarjeta {
-    flex: 0 0 auto; /* La imagen no crecerá ni se encogerá */
-    width: 50%; /* Ajusta este valor según tus necesidades */
-    height: 100%; /* Asegura que la imagen ocupe toda la altura de la tarjeta */
-    overflow: hidden; /* Oculta cualquier parte de la imagen que exceda el contenedor */
+    flex: 0 0 auto;
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    border-top-left-radius: 10px; /* Redondea la esquina superior izquierda */
+    border-bottom-left-radius: 10px; /* Redondea la esquina inferior izquierda */
 }
 
 .img-tarjeta img {
@@ -103,12 +103,9 @@ header, footer{
 .detalles-tarjeta {
     display: flex;
     flex-direction: column; /* Alinea los elementos en una columna */
-    justify-content: space-between; /* Distribuye el espacio disponible entre los elementos */
+    justify-content: space-evenly; /* Distribuye el espacio disponible entre los elementos */
     flex: 1 1 50%;
-    padding: 1rem; /* Este padding solo aplica dentro del contenedor */
-    font-size: 13px;
-    color: #333;
-    gap: 0; /* Sin espacio entre los elementos internos */
+    margin-left: 5px;
 }
 
 .detalles-tarjeta > * {
@@ -118,33 +115,45 @@ header, footer{
 
 .detalles-tarjeta h2 {
     margin-top: 0;
-    color: #333;
+    color: rgb(0, 0, 0);
+    font-size: 20px; /* Ajusta el tamaño del título */
 }
 
-.detalles-tarjeta h6,
+.detalles-tarjeta h4 {
+    color: #2c2929;
+    font-size: 16px;
+}
+
+
+.detalles-tarjeta h6 {
+    color: #333;
+    text-align: right;
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    margin-bottom: 10px; /* Espaciado inferior para separar el texto final */
+}
+
 .detalles-tarjeta p:last-of-type {
     color: #333;
     text-align: right;
 }
 
 .detalles-tarjeta p {
-    color: #666;
+    color: #3b3737;
     line-height: 1.5;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px; /* Ajusta el tamaño del texto */
 }
 
-.detalles-tarjeta h4 {
-    color: #000;
+.detalles-tarjeta strong {
+    font-weight: bold; /* Aplica negrita al texto fuerte */
 }
 
 /* Ajustes para el pie de página */
 footer {
-    width: 100%; /* Ocupa todo el ancho de la pantalla */
-    padding: 0.5rem; /* Reduce el padding */
-    font-size: 12px; /* Reduce el tamaño de la fuente */
-    background-color: rgb(87, 155, 250); /* Color de fondo del pie de página */
+    padding: 10px;
     text-align: center;
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-    margin-top: auto; /* Empuja el footer al fondo si el contenido es corto */
+    box-sizing: border-box;
+    margin-top: auto;
 }
 
 /* Estilo de la lista de redes sociales */
@@ -152,32 +161,41 @@ footer {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center; /* Centra los elementos horizontalmente */
+    text-align: center;
+    white-space: nowrap; /* Evita el salto de línea en los elementos */
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
 }
 
 .redes-sociales li {
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
+    margin-top: 15px;
+}
+
+/* Ajustes para el primer y último elemento */
+.redes-sociales li:first-child {
+    margin-left: 10px; /* Margen izquierdo más pequeño para el primer elemento */
+}
+
+.redes-sociales li:last-child {
+    margin-right: 10px; /* Margen derecho más pequeño para el último elemento */
 }
 
 .redes-sociales li a {
     text-decoration: none;
-    color: black;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra los elementos horizontalmente */
-    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center;
+    justify-content: center;
 }
 
 .redes-sociales li i {
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 5px;
 }
 
 .redes-sociales li span {
-    font-size: 12px;
-    color: #333;
+    font-size: 18px;
+    color: rgb(211, 195, 185);
 }
 
 /* Colores específicos para los íconos sociales */
@@ -199,86 +217,33 @@ footer {
 
 /* Media Queries para diferentes dispositivos */
 @media (max-width: 599px) {
-
     /* Ajustes para el contenedor de contenido principal */
     .contenido {
-        display: flex;
         padding: 20px;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
         flex: 1; /* Permite que el contenedor principal ocupe el espacio restante */
-        width: 100%;
         box-sizing: border-box;
     }
 
-    /* Ajustes para las tarjetas */
-    .tarjeta {
-        flex-direction: row; /* Cambia la disposición a columna */
-        max-width: 100%; /* La tarjeta ocupa el 100% del ancho del contenedor */
-        height: auto; /* Permite que la tarjeta ajuste su altura automáticamente */
-        margin: 0.5rem 0; /* Reduce el margen */
-        margin-bottom: 35px;
-        border-radius: 4px; /* Reduce el radio de borde */
-    }
-
-    .img-tarjeta {
-        width: 50%; /* La imagen ocupa todo el ancho disponible */
-        height: 256px; /* Fija una altura menor para la imagen */
-    }
-
-    .img-tarjeta img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover; /* Mantiene la proporción de la imagen */
-    }
-
+    /* Estilo del contenido dentro de la tarjeta */
     .detalles-tarjeta {
-        padding: 0.5rem; /* Reduce el padding para ahorrar espacio */
-        font-size: 12px; /* Reduce el tamaño de la fuente */
-        justify-content: flex-start; /* Alinea los elementos al inicio */
+        padding: 10px; /* Espaciado interno */
     }
 
-    /* Ajustes para los elementos dentro de detalles-tarjeta */
-    .detalles-tarjeta > * {
-        margin-bottom: 0.5rem; /* Añade un pequeño margen inferior */
+    .detalles-tarjeta h2{
+        font-size: 24px;
     }
 
-    .detalles-tarjeta h2 {
-        font-size: 1.40rem; /* Ajusta el tamaño del título */
+    .detalles-tarjeta h4{
+        font-size: 20px;
     }
 
-    .detalles-tarjeta h4 {
-        font-size: 1.20rem; /* Ajusta el tamaño del subtítulo */
-        color: #333;
-    }
-
-    .detalles-tarjeta h6,
-    .detalles-tarjeta p:last-of-type {
-        font-size: 0.875rem; /* Ajusta el tamaño del texto final */
-        text-align: left; /* Alinea el texto a la izquierda */
-    }
-
-    /* Ajustes para el encabezado */
-    header {
-        width: 100%; /* Ocupa todo el ancho de la pantalla */
-        padding: 0.5rem; /* Reduce el padding */
-        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-        background-color: rgb(87, 155, 250);; /* Color de fondo del encabezado */
-        text-align: center;
-    }
-
-    /* Ajustes para el pie de página */
-    footer {
-        width: 100%; /* Ocupa todo el ancho de la pantalla */
-        padding: 0.5rem; /* Reduce el padding */
-        font-size: 12px; /* Reduce el tamaño de la fuente */
-        background-color: rgb(87, 155, 250); /* Color de fondo del pie de página */
-        text-align: center;
-        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-        margin-top: auto; /* Empuja el footer al fondo si el contenido es corto */
+    .detalles-tarjeta p {
+        font-size: 16px; /* Ajusta el tamaño del texto */
     }
 }
+
 
 /* Media Query para tablets (600px a 1029px) */
 @media (min-width: 600px) and (max-width: 1029px) {
@@ -303,7 +268,6 @@ footer {
         display: flex; /* Usa flexbox para organizar los elementos */
         flex-direction: column; /* Dispone los elementos en una columna */
         text-decoration: none; /* Elimina la decoración del texto del enlace */
-        background-color: rgb(219, 202, 202); /* Establece el color de fondo de la tarjeta */
         border-radius: 8px; /* Añade bordes redondeados */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade sombra a la tarjeta */
         overflow: hidden; /* Oculta cualquier contenido que exceda los límites de la tarjeta */
@@ -374,7 +338,6 @@ footer {
         display: flex; /* Asegura que las tarjetas usen flexbox para organizar sus elementos hijos */
         flex-direction: row; /* Dispone los elementos hijos en una fila */
         text-decoration: none; /* Elimina la decoración del texto del enlace */
-        background-color: rgb(219, 202, 202); /* Establece el color de fondo de la tarjeta */
         border-radius: 8px; /* Añade bordes redondeados */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade sombra a la tarjeta */
         overflow: hidden; /* Oculta cualquier contenido que exceda los límites de la tarjeta */
@@ -442,7 +405,6 @@ footer {
         width: 100%; /* Ocupa todo el ancho de la pantalla */
         padding: 0.5rem; /* Reduce el padding */
         font-size: 12px; /* Reduce el tamaño de la fuente */
-        background-color: rgb(87, 155, 250); /* Color de fondo del pie de página */
         text-align: center;
         box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
         margin-top: auto; /* Empuja el footer al fondo si el contenido es corto */

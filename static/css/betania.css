@@ -10,10 +10,6 @@ body {
     box-sizing: border-box;
 }
 
-header, footer {
-    background-color: rgb(87, 155, 250);
-}
-
 /* Asegura que todos los elementos utilicen box-sizing: border-box */
 *,
 *::before,
@@ -23,26 +19,31 @@ header, footer {
 
 /* Estilo del encabezado */
 header {
-    height: 100px;
-    padding: 1rem; /* Reducir el espacio de padding */
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;  
+    position: relative; 
+}
+
+header, footer {
+    background-color: rgb(0, 77, 64);
 }
 
 .iconoHome {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
+    align-items: center; /* Centra horizontalmente los elementos */
+    text-decoration: none; /* Asegura que el texto no tenga subrayado */
+    color: rgb(211, 195, 185); /* Color del texto */
+    font-size: 22px; /* Tamaño de fuente del texto */
+    padding-left: 10px;
 }
 
 .iconoHome span {
     padding-top: 5px;
-    color: #333;
+    color: rgb(211, 195, 185);
+    font-size: 18px;
 }
 
 .tituloHeader {
@@ -254,31 +255,38 @@ img {
 
 /* Ajustes para el pie de página */
 footer {
-    width: 100%; /* Ocupa todo el ancho de la pantalla */
-    padding: 0.5rem; /* Reduce el padding */
-    font-size: 12px; /* Reduce el tamaño de la fuente */
-    background-color: rgb(87, 155, 250); /* Color de fondo del pie de página */
+    padding: 10px;
     text-align: center;
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-    margin-top: auto; /* Empuja el footer al fondo si el contenido es corto */
+    box-sizing: border-box;
+    margin-top: auto;
 }
 
+/* Estilo de la lista de redes sociales */
 .redes-sociales {
     list-style: none;
     padding: 0;
     margin: 0;
     text-align: center;
+    white-space: nowrap; /* Evita el salto de línea en los elementos */
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
 }
 
 .redes-sociales li {
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
+    margin-top: 15px;
+}
+
+/* Ajustes para el primer y último elemento */
+.redes-sociales li:first-child {
+    margin-left: 10px; /* Margen izquierdo más pequeño para el primer elemento */
+}
+
+.redes-sociales li:last-child {
+    margin-right: 10px; /* Margen derecho más pequeño para el último elemento */
 }
 
 .redes-sociales li a {
     text-decoration: none;
-    color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -286,15 +294,16 @@ footer {
 }
 
 .redes-sociales li i {
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 5px;
 }
 
 .redes-sociales li span {
-    font-size: 12px;
-    color: #333;
+    font-size: 18px;
+    color: rgb(211, 195, 185);
 }
 
+/* Colores específicos para los íconos sociales */
 .redes-sociales li:nth-child(1) i {
     color: green;
 }
@@ -312,6 +321,34 @@ footer {
 }
 
 
+/* Media Queries para diferentes dispositivos */
+@media (max-width: 599px) {
+    /* Ajustes para el contenedor de contenido principal */
+    .contenido {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        flex: 1; /* Permite que el contenedor principal ocupe el espacio restante */
+        box-sizing: border-box;
+    }
+
+    /* Estilo del contenido dentro de la tarjeta */
+    .detalles-tarjeta {
+        padding: 10px; /* Espaciado interno */
+    }
+
+    .detalles-tarjeta h2{
+        font-size: 24px;
+    }
+
+    .detalles-tarjeta h4{
+        font-size: 20px;
+    }
+
+    .detalles-tarjeta p {
+        font-size: 16px; /* Ajusta el tamaño del texto */
+    }
+}
 
 /* Media queries para pantallas más pequeñas */
 /* Media query para pantallas más pequeñas */
@@ -344,25 +381,6 @@ footer {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 
-    /* Ajustes para el encabezado */
-    header {
-        width: 100%; /* Ocupa todo el ancho de la pantalla */
-        padding: 0.5rem; /* Reduce el padding */
-        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-        background-color: rgb(87, 155, 250);; /* Color de fondo del encabezado */
-        text-align: center;
-    }
-
-    /* Ajustes para el pie de página */
-    footer {
-        width: 100%; /* Ocupa todo el ancho de la pantalla */
-        padding: 0.5rem; /* Reduce el padding */
-        font-size: 12px; /* Reduce el tamaño de la fuente */
-        background-color: rgb(87, 155, 250); /* Color de fondo del pie de página */
-        text-align: center;
-        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-        margin-top: auto; /* Empuja el footer al fondo si el contenido es corto */
-    }
 }
 
 /* Media queries para pantallas medianas y grandes */
