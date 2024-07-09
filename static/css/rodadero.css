@@ -19,15 +19,11 @@ body {
 
 /* Estilo del encabezado */
 header {
-    padding: 10px;
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative; 
-}
-
-header, footer {
-    background-color: rgb(0, 77, 64);
 }
 
 .iconoHome {
@@ -37,13 +33,17 @@ header, footer {
     text-decoration: none; /* Asegura que el texto no tenga subrayado */
     color: rgb(211, 195, 185); /* Color del texto */
     font-size: 22px; /* Tamaño de fuente del texto */
-    padding-left: 10px;
+    margin-left: 10px;
 }
 
 .iconoHome span {
     padding-top: 5px;
     color: rgb(211, 195, 185);
     font-size: 18px;
+}
+
+header, footer{
+    background-color: rgb(0, 77, 64);
 }
 
 .tituloHeader {
@@ -56,9 +56,10 @@ header, footer {
 
 .tituloHeader img {
     width: 100px;
-    height: 100%;
+    height: 100%; /* Establecer la altura de la imagen al 100% del contenedor */
     margin: 0;
     padding: 0;
+    padding-right: 10px; 
 }
 
 .carrousel {
@@ -160,7 +161,7 @@ img {
 }
 
 .opcionesReservar {
-    padding: 0rem; /* Ajusta el padding según sea necesario */
+    padding-bottom: 10px;
 }
 
 .opcionesReservar h3 {
@@ -176,20 +177,17 @@ img {
     margin: 0.5rem 0; /* Espacio entre las opciones de reserva */
 }
 
-.opcionReserva1 p,
-.opcionReserva2 p {
+.opcionReserva1 p {
     margin-right: 5px; /* Elimina el margen por defecto */
     flex: 1; /* Ocupa todo el espacio disponible a la izquierda */
 }
 
-.opcionReserva1 form,
-.opcionReserva2 form {
+.opcionReserva1 form {
     margin: 0; /* Elimina el margen por defecto */
     flex-shrink: 0; /* Evita que el formulario se reduzca */
 }
 
-.opcionReserva1 button,
-.opcionReserva2 button {
+.opcionReserva1 button {
     padding: 10px 15px;
     background-color: #007bff;
     color: #fff;
@@ -229,7 +227,7 @@ img {
     display: flex;
     justify-content: space-evenly;
     overflow-x: auto;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 
 .mapa {
@@ -357,6 +355,19 @@ footer {
         font-size: 24px;
     }
 
+    .iconoHome {
+        font-size: 24px; /* Tamaño de fuente del texto */
+    }
+
+    .iconoHome span {
+        font-size: 24px;
+    }
+
+    .tituloHeader img {
+        width: 150px; /* Ajusta este valor según el tamaño que desees */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+
     .conteCarrousel {
         height: 300px; /* Ajusta la altura del carrusel */
     }
@@ -394,6 +405,19 @@ footer {
 
     body{
         font-size: 24px;
+    }
+
+    .iconoHome {
+        font-size: 24px; /* Tamaño de fuente del texto */
+    }
+
+    .iconoHome span {
+        font-size: 24px;
+    }
+
+    .tituloHeader img {
+        width: 150px; /* Ajusta este valor según el tamaño que desees */
+        height: auto; /* Mantiene la proporción de la imagen */
     }
 
     /* Estilos para el texto del servicio */

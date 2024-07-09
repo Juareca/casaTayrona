@@ -31,15 +31,16 @@ def formulario():
     reserva_exitosa = False
 
     if request.method == 'POST':
+        fecha_entrada = request.form.get('fecha-entrada')
+        fecha_salida = request.form.get('fecha-salida')
         destino = request.form.get('destino')
         habitaciones = request.form.get('habitaciones')
-        huespedes = request.form.get('huespedes')
+        huespedes = request.form.get('cantidad-huespedes')
         precio = request.form.get('precio')
         nombre = request.form.get('nombre')
         apellido = request.form.get('apellido')
         email = request.form.get('email')
         telefono = request.form.get('telefono')
-        cantidad_noches = request.form.get('cantidad-noches')
 
         # Construir el cuerpo del mensaje
         email_body = f'''
@@ -47,13 +48,23 @@ def formulario():
         Se ha recibido una nueva reserva desde el formulario de Casa Tayrona:
 
         Nombre: {nombre} {apellido}
+        ----------------------------------------
         Correo electrónico: {email}
+        ----------------------------------------
         Teléfono: {telefono}
-        Cantidad de noches: {cantidad_noches}
+        ----------------------------------------
+        fecha-entrada: {fecha_entrada}
+        ----------------------------------------
+        fecha-salida: {fecha_salida}
+        ----------------------------------------
         Destino: {destino}
+        ----------------------------------------
         Habitaciones: {habitaciones}
-        Huéspedes: {huespedes}
+        ----------------------------------------
+        Cantidad de huéspedes: {huespedes}
+        ----------------------------------------
         Precio: {precio}
+        ----------------------------------------
 
         '''
 

@@ -231,7 +231,7 @@ img {
     display: flex;
     justify-content: space-evenly;
     overflow-x: auto;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 
 .mapa {
@@ -357,6 +357,19 @@ footer {
 
     body{
         font-size: 22px;
+    }
+
+    .iconoHome {
+        font-size: 24px; /* Tamaño de fuente del texto */
+    }
+
+    .iconoHome span {
+        font-size: 24px;
+    }
+
+    .tituloHeader img {
+        width: 150px; /* Ajusta este valor según el tamaño que desees */
+        height: auto; /* Mantiene la proporción de la imagen */
     }
 
     /* Estilos para el texto del servicio */

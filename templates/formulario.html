@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Reserva</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/formulario.css') }}">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
     <script src="https://kit.fontawesome.com/adf6f04551.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
 </head>
 <body>
 
@@ -42,12 +45,19 @@
         <label for="telefono">Teléfono</label>
         <input type="text" name="telefono" id="telefono" required>
 
-        <label for="cantidad-huespedes">Cantidad de huespedes</label>
+        <div class="form-group">
+            <label for="fecha-entrada">Fecha de entrada</label>
+            <input type="text" name="fecha-entrada" id="fecha-entrada" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fecha-salida">Fecha de salida</label>
+            <input type="text" name="fecha-salida" id="fecha-salida" class="form-control" required>
+        </div>
+
+        <label for="cantidad-huespedes">Cantidad de huéspedes</label>
         <input type="number" name="cantidad-huespedes" id="cantidad-huespedes" required>
     
-        <label for="cantidad-noches">Cantidad de noches</label>
-        <input type="number" name="cantidad-noches" id="cantidad-noches" required>
-
         <button type="submit">Enviar Reserva</button>
 
     </form>
@@ -92,6 +102,19 @@
             });
         });
     }
+</script>
+
+<script>
+    $(function() {
+        $("#fecha-entrada, #fecha-salida").datepicker({
+            dateFormat: 'yy-mm-dd',  // Formato de fecha
+            minDate: 0,              // La fecha mínima es hoy
+            maxDate: '+1y',          // La fecha máxima es dentro de un año
+            changeMonth: true,       // Permitir cambio de mes
+            changeYear: true,        // Permitir cambio de año
+            showButtonPanel: true    // Mostrar botones de selección de mes y año
+        });
+    });
 </script>
 
 <footer>
