@@ -23,12 +23,11 @@
 
     <h2>Formulario de Reserva</h2>
 
-    <form action="{{ url_for('formulario') }}" method="POST">
+    <form id="reservaForm" action="{{ url_for('formulario') }}" method="POST">
 
         <!-- Campos ocultos para pasar los parámetros -->
         <input type="hidden" name="destino" id="destino">
         <input type="hidden" name="habitaciones" id="habitaciones">
-        <input type="hidden" name="huespedes" id="huespedes">
         <input type="hidden" name="precio" id="precio">
 
         <label for="nombre">Nombre</label>
@@ -42,6 +41,9 @@
     
         <label for="telefono">Teléfono</label>
         <input type="text" name="telefono" id="telefono" required>
+
+        <label for="cantidad-huespedes">Cantidad de huespedes</label>
+        <input type="number" name="cantidad-huespedes" id="cantidad-huespedes" required>
     
         <label for="cantidad-noches">Cantidad de noches</label>
         <input type="number" name="cantidad-noches" id="cantidad-noches" required>
@@ -59,14 +61,36 @@
         const params = new URLSearchParams(window.location.search);
         const destino = params.get('destino');
         const habitaciones = params.get('habitaciones');
-        const huespedes = params.get('huespedes');
         const precio = params.get('precio');
 
         // Llenar los campos ocultos del formulario
         document.getElementById('destino').value = destino;
         document.getElementById('habitaciones').value = habitaciones;
-        document.getElementById('huespedes').value = huespedes;
         document.getElementById('precio').value = precio;
+
+        // Manejar el envío del formulario
+        document.getElementById('reservaForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar el envío por defecto
+
+            // Realizar la solicitud asíncrona
+            const formData = new FormData(this);
+            fetch(this.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Su reserva ha sido realizada con éxito');
+                    window.location.href = "{{ url_for('index') }}"; // Redirigir a la página de inicio
+                } else {
+                    alert('Hubo un problema al procesar su reserva');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Hubo un problema al procesar su reserva');
+            });
+        });
     }
 </script>
 

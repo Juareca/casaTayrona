@@ -64,8 +64,6 @@ header, footer {
 
 .carrousel {
     width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .conteCarrousel {
@@ -77,6 +75,7 @@ header, footer {
     position: relative;
     width: 100%;
     height: 100%;
+    padding-inline: 20px;
 }
 
 .itemCarrouselTarjeta {
@@ -150,8 +149,7 @@ header, footer {
 }
 
 .contenidoDetalles {
-    padding: 20px;
-    padding-top: 20px;
+    padding-inline: 20px;
     width: 100%;
     margin: 0 auto;
 }
@@ -173,6 +171,7 @@ img {
 .opcionReserva2,
 .opcionReserva3 {
     display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
     justify-content: space-between;
     padding: 0.5rem 1rem; /* Ajusta el padding según sea necesario */
     border: 1px solid #ccc; /* Opcional: para visualización */
@@ -181,7 +180,7 @@ img {
 
 .opcionReserva2 p,
 .opcionReserva3 p {
-    margin: 0; /* Elimina el margen por defecto */
+    margin-right: 5px; /* Elimina el margen por defecto */
     flex: 1; /* Ocupa todo el espacio disponible a la izquierda */
 }
 
@@ -206,12 +205,10 @@ img {
     background-color: #0056b3;
 }
 
-
 .conteServicios {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 10px;
+    justify-content: space-between;
 }
 
 .servicio {
@@ -332,11 +329,6 @@ footer {
 
     .conteCarrousel {
         height: 200px;
-    }
-
-    .carrousel {
-        width: 95%;
-        margin-top: 10px;
     }
 
     .itemCarrousel {
