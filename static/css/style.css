@@ -243,10 +243,28 @@ footer {
     .detalles-tarjeta p {
         font-size: 16px; /* Ajusta el tamaño del texto */
     }
+
+    .redes-sociales li span {
+        font-size: 16px;
+    }
 }
 
 /* Media Query para tablets (600px a 1029px) */
-@media (min-width: 600px) and (max-width: 1400px) {
+@media (min-width: 600px) and (max-width: 1024px) {
+    
+    .iconoHome {
+        font-size: 24px; /* Tamaño de fuente del texto */
+    }
+
+    .iconoHome span {
+        font-size: 24px;
+    }
+
+    .tituloHeader img {
+        width: 150px; /* Ajusta este valor según el tamaño que desees */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+    
 
     /* Ajustes para el contenedor de contenido principal */
     .contenido {
@@ -319,11 +337,14 @@ footer {
     .precio {
         font-size: 24px; /* Ajusta el tamaño de la fuente según tus necesidades */
     }
+
+    
     
 }
 
 /* Dispositivos grandes (1200px en adelante) */
-@media (min-width: 1401px) {
+@media (min-width: 1200px) {
+
 
     /* Estilo del contenedor de contenido principal */
     .contenido {
@@ -337,10 +358,9 @@ footer {
         padding: 0; /* Asegura que no haya relleno que pueda afectar al centrado */
     }
 
-
     .tarjeta {
-        flex: 1 1 45%; /* Permite que las tarjetas ocupen hasta el 45% del ancho del contenedor */
-        max-width: 45%; /* Limita el ancho máximo al 45% del contenedor para que quepan dos tarjetas en una fila */
+        flex: 1 1 40%; /* Permite que las tarjetas ocupen hasta el 40% del ancho del contenedor */
+        max-width: 40%; /* Limita el ancho máximo al 40% del contenedor para que quepan más tarjetas en una fila */
         margin: 1rem; /* Añade espacio alrededor de cada tarjeta */
         display: flex; /* Asegura que las tarjetas usen flexbox para organizar sus elementos hijos */
         flex-direction: row; /* Dispone los elementos hijos en una fila */
@@ -352,7 +372,7 @@ footer {
         border: 0.5px solid rgb(131, 127, 127); /* Añade un borde a la tarjeta */
         gap: 0; /* Elimina cualquier espacio entre los elementos hijos de la tarjeta */
         padding: 0; /* Asegura que no haya padding interno en la tarjeta */
-        height: 400px; /* Ajusta la altura total de la tarjeta */
+        height: 300px; /* Ajusta la altura total de la tarjeta */
     }
 
     .tarjeta:hover {
@@ -390,21 +410,21 @@ footer {
     }
 
     .detalles-tarjeta h2 {
-        font-size: 32px;
+        font-size: 22px;
     }
 
     .detalles-tarjeta h4 {
-        font-size: 26px;
+        font-size: 18px;
     }
 
 
     .detalles-tarjeta h6,
     .detalles-tarjeta p:last-of-type {
-        font-size: 22px;
+        font-size: 16px;
     }
 
     .detalles-tarjeta p {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .redes-sociales{
