@@ -328,15 +328,6 @@ footer {
 /* Media query para pantallas más pequeñas */
 @media (max-width: 599px) {
 
-    body{
-        font-size: 22px;
-    }
-
-    /* Estilos para el texto del servicio */
-    .servicio span {
-        font-size: 22px; /* Aumento del tamaño de la letra */
-    }
-
     .conteCarrousel {
         height: 200px;
     }
