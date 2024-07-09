@@ -74,6 +74,7 @@ header, footer{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid rgb(131, 127, 127);    
+    height: 400px;
 }
 .tarjeta:first-child{
     margin-bottom: 20px;
@@ -120,20 +121,20 @@ header, footer{
 }
 
 .detalles-tarjeta h4 {
-    color: #2c2929;
+    color: rgb(20, 19, 19);
     font-size: 16px;
 }
 
 
 .detalles-tarjeta h6 {
-    color: #333;
+    color: rgb(20, 19, 19);
     text-align: right;
     font-size: 14px; /* Ajusta el tamaño del texto */
     margin-bottom: 10px; /* Espaciado inferior para separar el texto final */
 }
 
 .detalles-tarjeta p:last-of-type {
-    color: #333;
+    color: #000000;
     text-align: right;
 }
 
@@ -219,7 +220,7 @@ footer {
 @media (max-width: 599px) {
     /* Ajustes para el contenedor de contenido principal */
     .contenido {
-        padding: 20px;
+        padding: 10px;
         flex-direction: column;
         align-items: center;
         flex: 1; /* Permite que el contenedor principal ocupe el espacio restante */
@@ -244,95 +245,101 @@ footer {
     }
 }
 
-
 /* Media Query para tablets (600px a 1029px) */
-@media (min-width: 600px) and (max-width: 1029px) {
+@media (min-width: 600px) and (max-width: 1400px) {
 
-    body{
-        font-size: 20px;
+    /* Ajustes para el contenedor de contenido principal */
+    .contenido {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        flex: 1; /* Permite que el contenedor principal ocupe el espacio restante */
+        box-sizing: border-box;
     }
 
+    /* Estilo de las tarjetas */
+    .tarjeta {
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        background-color: rgb(202, 223, 211);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 2px solid rgb(131, 127, 127);    
+        height: 450px;
+    }
+
+    .tarjeta:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Estilo de la imagen dentro de la tarjeta */
+    .img-tarjeta {
+        flex: 0 0 auto;
+        width: 50%;
+        height: auto;
+        overflow: hidden;
+        border-top-left-radius: 10px; /* Redondea la esquina superior izquierda */
+        border-bottom-left-radius: 10px; /* Redondea la esquina inferior izquierda */
+    }
+
+    .img-tarjeta img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ajusta la imagen para que llene el contenedor sin distorsión */
+    }
+
+    /* Estilo del contenido dentro de la tarjeta */
+    .detalles-tarjeta {
+        padding: 10px; /* Espaciado interno */
+    }
+
+    .detalles-tarjeta h2{
+        font-size: 32px;
+    }
+
+    .detalles-tarjeta h4{
+        font-size: 26px;
+    }
+
+    .detalles-tarjeta h6{
+        font-size: 24px;
+    }
+
+    .detalles-tarjeta p {
+        font-size: 24px; /* Ajusta el tamaño del texto */
+    }
+
+    .redes-sociales{
+        justify-content: space-around;
+    }
+
+    .precio {
+        font-size: 24px; /* Ajusta el tamaño de la fuente según tus necesidades */
+    }
+    
+}
+
+/* Dispositivos grandes (1200px en adelante) */
+@media (min-width: 1401px) {
+
+    /* Estilo del contenedor de contenido principal */
     .contenido {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        padding: 1rem;
-        margin-top: 20px;
+        align-items: center; /* Centra los elementos verticalmente */
+        width: 100%;
+        height: 65vh; /* Ajusta la altura al 100% de la altura visible de la pantalla */
+        margin: 0; /* Asegura que no haya margen que pueda afectar al centrado */
+        padding: 0; /* Asegura que no haya relleno que pueda afectar al centrado */
     }
+
 
     .tarjeta {
-        flex: 1 1 calc(45% - 2rem); /* Ajusta el tamaño de la tarjeta */
-        max-width: calc(45% - 2rem); /* Ajusta el ancho máximo de la tarjeta */
-        height: 350px; /* Aumenta la altura de la tarjeta */
-        margin: 1rem; /* Añade espacio alrededor de cada tarjeta */
-        display: flex; /* Usa flexbox para organizar los elementos */
-        flex-direction: column; /* Dispone los elementos en una columna */
-        text-decoration: none; /* Elimina la decoración del texto del enlace */
-        border-radius: 8px; /* Añade bordes redondeados */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade sombra a la tarjeta */
-        overflow: hidden; /* Oculta cualquier contenido que exceda los límites de la tarjeta */
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade transiciones suaves */
-        border: 0.5px solid rgb(131, 127, 127); /* Añade un borde a la tarjeta */
-        gap: 0; /* Elimina cualquier espacio entre los elementos hijos de la tarjeta */
-        padding: 0; /* Asegura que no haya padding interno en la tarjeta */
-    }
-
-    .tarjeta:hover {
-        transform: translateY(-5px); /* Mueve la tarjeta hacia arriba al pasar el cursor */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra para dar un efecto de elevación */
-    }
-
-    .img-tarjeta {
-        flex: 0 0 auto; /* La imagen no crecerá ni se encogerá */
-        width: 100%; /* La imagen ocupará todo el ancho disponible */
-        height: 50%; /* La imagen ocupará el 50% de la altura de la tarjeta */
-        overflow: hidden; /* Oculta cualquier parte de la imagen que exceda los límites del contenedor */
-    }
-
-    .img-tarjeta img {
-        width: 100%; /* La imagen ocupará todo el ancho del contenedor */
-        height: 100%; /* La imagen ocupará toda la altura del contenedor */
-        object-fit: cover; /* La imagen se escalará y recortará para llenar el contenedor */
-    }
-
-    .detalles-tarjeta {
-        display: flex; /* Usa flexbox para organizar los elementos */
-        flex-direction: column; /* Alinea los elementos en una columna */
-        justify-content: space-between; /* Distribuye el espacio entre los elementos */
-        flex: 1 1 50%; /* Permite que el contenedor de detalles crezca */
-        padding: 1.5rem; /* Añade espacio alrededor del contenido */
-        font-size: 15px; /* Ajusta el tamaño de la fuente */
-        color: #333; /* Establece el color del texto */
-        gap: 0; /* Elimina cualquier espacio entre los elementos internos */
-    }
-
-    .detalles-tarjeta > * {
-        margin: 0; /* Elimina cualquier margen entre los elementos internos */
-        padding: 0; /* Asegura que no haya padding adicional */
-    }
-
-    .detalles-tarjeta h2 {
-        margin-top: 0; /* Elimina el margen superior */
-        color: #333; /* Establece el color del texto */
-    }
-
-    .detalles-tarjeta h6,
-    .detalles-tarjeta p:last-of-type {
-        color: black; /* Establece el color del texto */
-        text-align: right; /* Alinea el texto a la derecha */
-    }
-
-    .detalles-tarjeta p {
-        color: #666; /* Establece el color del texto */
-        line-height: 1.5; /* Ajusta la altura de la línea */
-    }
-}
-
-/* Dispositivos grandes (1200px en adelante) */
-@media (min-width: 1030px){
-
-    .tarjeta {
-        flex: 1 1 45%; /* Permite que las tarjetas ocupen hasta el 45% del ancho del contenedor, ajustándose si es necesario */
+        flex: 1 1 45%; /* Permite que las tarjetas ocupen hasta el 45% del ancho del contenedor */
         max-width: 45%; /* Limita el ancho máximo al 45% del contenedor para que quepan dos tarjetas en una fila */
         margin: 1rem; /* Añade espacio alrededor de cada tarjeta */
         display: flex; /* Asegura que las tarjetas usen flexbox para organizar sus elementos hijos */
@@ -345,6 +352,7 @@ footer {
         border: 0.5px solid rgb(131, 127, 127); /* Añade un borde a la tarjeta */
         gap: 0; /* Elimina cualquier espacio entre los elementos hijos de la tarjeta */
         padding: 0; /* Asegura que no haya padding interno en la tarjeta */
+        height: 400px; /* Ajusta la altura total de la tarjeta */
     }
 
     .tarjeta:hover {
@@ -352,7 +360,6 @@ footer {
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra para dar un efecto de elevación */
     }
 
-    /* Ajustes adicionales para los elementos dentro de la tarjeta si es necesario */
     .img-tarjeta {
         flex: 0 0 auto; /* La imagen no crecerá ni se encogerá, manteniendo su tamaño inicial */
         width: 50%; /* La imagen ocupará el 50% del ancho de la tarjeta */
@@ -369,9 +376,9 @@ footer {
     .detalles-tarjeta {
         display: flex; /* Usa flexbox para organizar los elementos */
         flex-direction: column; /* Alinea los elementos en una columna */
-        justify-content: space-between; /* Distribuye el espacio disponible entre los elementos */
+        justify-content: space-around; /* Distribuye el espacio disponible entre los elementos */
         flex: 1 1 50%; /* Permite que el contenedor de detalles crezca para ocupar el 50% del ancho de la tarjeta */
-        padding: 1rem; /* Añade espacio alrededor del contenido */
+        padding: 0.5rem; /* Añade espacio alrededor del contenido, ajustado para reducir altura */
         font-size: 13px; /* Ajusta el tamaño de la fuente */
         color: #333; /* Establece el color del texto */
         gap: 0; /* Elimina cualquier espacio entre los elementos internos */
@@ -383,32 +390,25 @@ footer {
     }
 
     .detalles-tarjeta h2 {
-        margin-top: 0; /* Elimina el margen superior */
-        color: #333; /* Establece el color del texto */
+        font-size: 32px;
     }
+
+    .detalles-tarjeta h4 {
+        font-size: 26px;
+    }
+
 
     .detalles-tarjeta h6,
     .detalles-tarjeta p:last-of-type {
-        color: black; /* Establece el color del texto */
-        text-align: right; /* Alinea el texto a la derecha */
+        font-size: 22px;
     }
 
     .detalles-tarjeta p {
-        color: #666; /* Establece el color del texto */
-        line-height: 1.5; /* Ajusta la altura de la línea */
+        font-size: 18px;
     }
 
-    /* Estilo del pie de página */
-    /* Estilo del pie de página */
-    /* Ajustes para el pie de página */
-    footer {
-        width: 100%; /* Ocupa todo el ancho de la pantalla */
-        padding: 0.5rem; /* Reduce el padding */
-        font-size: 12px; /* Reduce el tamaño de la fuente */
-        text-align: center;
-        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-        margin-top: auto; /* Empuja el footer al fondo si el contenido es corto */
+    .redes-sociales{
+        justify-content: space-around;
     }
+
 }
-
-

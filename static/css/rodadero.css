@@ -63,8 +63,8 @@ header, footer {
 
 .carrousel {
     width: 100%;
-    margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .conteCarrousel {
@@ -162,27 +162,31 @@ img {
 }
 
 .opcionesReservar {
-    border: 1px solid #ddd;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0rem; /* Ajusta el padding según sea necesario */
 }
 
 .opcionesReservar h3 {
-    margin-top: 0;
-    color: #333;
+    margin-bottom: 1rem; /* Añade un margen inferior */
 }
 
-.opcionReserva1,
-.opcionReserva2 {
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f4f4f4;
+.opcionReserva1{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding: 0.5rem 1rem; /* Ajusta el padding según sea necesario */
+    border: 1px solid #ccc; /* Opcional: para visualización */
+    margin: 0.5rem 0; /* Espacio entre las opciones de reserva */
+}
+
+.opcionReserva1 p,
+.opcionReserva2 p {
+    margin: 0; /* Elimina el margen por defecto */
+    flex: 1; /* Ocupa todo el espacio disponible a la izquierda */
+}
+
+.opcionReserva1 form,
+.opcionReserva2 form {
+    margin: 0; /* Elimina el margen por defecto */
+    flex-shrink: 0; /* Evita que el formulario se reduzca */
 }
 
 .opcionReserva1 button,
@@ -203,7 +207,8 @@ img {
 .conteServicios {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-around;
+    margin-bottom: 10px;
 }
 
 .servicio {
@@ -224,8 +229,9 @@ img {
 
 .ubicacion {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     overflow-x: auto;
+    margin-bottom: 10px;
 }
 
 .mapa {
@@ -321,6 +327,16 @@ footer {
 /* Media queries para pantallas más pequeñas */
 /* Media query para pantallas más pequeñas */
 @media (max-width: 599px) {
+
+    body{
+        font-size: 22px;
+    }
+
+    /* Estilos para el texto del servicio */
+    .servicio span {
+        font-size: 22px; /* Aumento del tamaño de la letra */
+    }
+
     .conteCarrousel {
         height: 200px;
     }
@@ -351,7 +367,12 @@ footer {
 }
 
 /* Media queries para pantallas medianas y grandes */
-@media (min-width: 600px) and (max-width: 1029px) {
+@media (min-width: 600px) and (max-width: 1400px) {
+
+    body{
+        font-size: 24px;
+    }
+
     .conteCarrousel {
         height: 300px; /* Ajusta la altura del carrusel */
     }
@@ -363,9 +384,39 @@ footer {
     .itemCarrouselArrows i {
         font-size: 2em; /* Ajusta el tamaño de las flechas */
     }
+
+    .btnReservar button {
+        padding: 5px 10px; /* Ajusta el relleno del botón según sea necesario */
+        background-color: dodgerblue;
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .opcionReserva1 button.opcion1 {
+        font-size: 18px; /* Aumenta el tamaño del texto del botón */
+        padding: 12px 24px; /* Ajusta el padding para que el botón sea más grande */
+        background-color: #3498db; /* Cambia el color de fondo del botón si es necesario */
+        color: white; /* Cambia el color del texto del botón */
+        border: none; /* Elimina el borde del botón si es necesario */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    }
+    
+    .opcionReserva1 button.opcion1:hover {
+        background-color: #2980b9; /* Cambia el color de fondo del botón al pasar el cursor */
+    }
 }
 
-@media (min-width: 1030px) {
+@media (min-width: 1401px) {
+
+    body{
+        font-size: 24px;
+    }
+
+    /* Estilos para el texto del servicio */
+    .servicio span {
+        font-size: 24px; /* Aumento del tamaño de la letra */
+    }
+
     .conteCarrousel {
         height: 450px; /* Ajusta la altura del carrusel */
     }
@@ -376,6 +427,34 @@ footer {
     
     .conteCarrouselController > a {
         font-size: 2em; /* Ajusta el tamaño de los controladores */
+    }
+
+    .redes-sociales{
+        justify-content: space-around;
+    }
+
+    .mapa {
+        width: 25%;
+    }
+
+    .btnReservar button {
+        padding: 5px 10px; /* Ajusta el relleno del botón según sea necesario */
+        background-color: dodgerblue;
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .opcionReserva1 button.opcion1 {
+        font-size: 18px; /* Aumenta el tamaño del texto del botón */
+        padding: 12px 24px; /* Ajusta el padding para que el botón sea más grande */
+        background-color: #3498db; /* Cambia el color de fondo del botón si es necesario */
+        color: white; /* Cambia el color del texto del botón */
+        border: none; /* Elimina el borde del botón si es necesario */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    }
+    
+    .opcionReserva1 button.opcion1:hover {
+        background-color: #2980b9; /* Cambia el color de fondo del botón al pasar el cursor */
     }
 }
 
