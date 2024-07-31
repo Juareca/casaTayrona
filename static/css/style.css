@@ -74,7 +74,7 @@ header, footer{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid rgb(131, 127, 127);    
-    height: 400px;
+    height: auto;
 }
 .tarjeta:first-child{
     margin-bottom: 20px;
@@ -220,16 +220,24 @@ footer {
 @media (max-width: 599px) {
     /* Ajustes para el contenedor de contenido principal */
     .contenido {
-        padding: 10px;
+        padding: 20px;
         flex-direction: column;
         align-items: center;
         flex: 1; /* Permite que el contenedor principal ocupe el espacio restante */
         box-sizing: border-box;
     }
 
+    .tarjeta{
+        height: 280px;
+    }
+
+    .img-tarjeta{
+        height: 100%;
+    }
+
     /* Estilo del contenido dentro de la tarjeta */
     .detalles-tarjeta {
-        padding: 10px; /* Espaciado interno */
+        padding-right: 10px;
     }
 
     .detalles-tarjeta h2{
@@ -250,7 +258,7 @@ footer {
 }
 
 /* Media Query para tablets (600px a 1029px) */
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1029px) {
     
     .iconoHome {
         font-size: 24px; /* Tamaño de fuente del texto */
@@ -268,7 +276,7 @@ footer {
 
     /* Ajustes para el contenedor de contenido principal */
     .contenido {
-        padding: 20px;
+        padding: 40px;
         flex-direction: column;
         align-items: center;
         flex: 1; /* Permite que el contenedor principal ocupe el espacio restante */
@@ -285,7 +293,7 @@ footer {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         border: 2px solid rgb(131, 127, 127);    
-        height: 450px;
+        height: 550px;
     }
 
     .tarjeta:hover {
@@ -296,8 +304,7 @@ footer {
     /* Estilo de la imagen dentro de la tarjeta */
     .img-tarjeta {
         flex: 0 0 auto;
-        width: 50%;
-        height: auto;
+        height: 100%;
         overflow: hidden;
         border-top-left-radius: 10px; /* Redondea la esquina superior izquierda */
         border-bottom-left-radius: 10px; /* Redondea la esquina inferior izquierda */
@@ -338,8 +345,10 @@ footer {
         font-size: 24px; /* Ajusta el tamaño de la fuente según tus necesidades */
     }
 
-    
-    
+    .redes-sociales li span {
+        font-size: 24px;
+    }
+
 }
 
 /* Dispositivos grandes (1200px en adelante) */
