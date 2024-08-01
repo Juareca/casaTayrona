@@ -120,7 +120,7 @@ button:hover {
 
 /* Ajustes para el pie de página */
 footer {
-    padding: 5px;
+    padding: 10px;
     text-align: center;
     box-sizing: border-box;
     margin-top: auto;
@@ -188,4 +188,14 @@ footer {
 /* Media Query para pantallas pequeñas */
 @media (max-width: 599px) {
 
+}
+
+@media (min-width: 600px) and (max-width: 1029px){
+
+}
+
+@media (min-width: 1200px){
+    .redes-sociales{
+        justify-content: space-around;
+    }
 }

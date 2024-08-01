@@ -241,15 +241,15 @@ footer {
     }
 
     .detalles-tarjeta h2{
-        font-size: 24px;
+        font-size: 18px;
     }
 
     .detalles-tarjeta h4{
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .detalles-tarjeta p {
-        font-size: 16px; /* Ajusta el tamaño del texto */
+        font-size: 14px; /* Ajusta el tamaño del texto */
     }
 
     .redes-sociales li span {
@@ -322,7 +322,7 @@ footer {
     }
 
     .detalles-tarjeta h2{
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .detalles-tarjeta h4{

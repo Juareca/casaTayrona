@@ -1,6 +1,7 @@
 /* Ajustes para el cuerpo */
 body {
     font-size: 16px; /* Aumenta ligeramente el tamaño de la fuente para mejor legibilidad */
+    flex: 1;
     margin: 0;
     padding: 0;
     display: flex;
@@ -26,6 +27,10 @@ header {
     position: relative; 
 }
 
+header, footer{
+    background-color: rgb(0, 77, 64);
+}
+
 .iconoHome {
     display: flex;
     flex-direction: column;
@@ -33,17 +38,13 @@ header {
     text-decoration: none; /* Asegura que el texto no tenga subrayado */
     color: rgb(211, 195, 185); /* Color del texto */
     font-size: 22px; /* Tamaño de fuente del texto */
-    margin-left: 10px;
+    padding-left: 10px;
 }
 
 .iconoHome span {
     padding-top: 5px;
     color: rgb(211, 195, 185);
     font-size: 18px;
-}
-
-header, footer{
-    background-color: rgb(0, 77, 64);
 }
 
 .tituloHeader {
@@ -56,10 +57,9 @@ header, footer{
 
 .tituloHeader img {
     width: 100px;
-    height: 100%; /* Establecer la altura de la imagen al 100% del contenedor */
+    height: 100%;
     margin: 0;
     padding: 0;
-    padding-right: 10px; 
 }
 
 .carrousel {
@@ -255,7 +255,7 @@ img {
 
 /* Ajustes para el pie de página */
 footer {
-    padding: 5px;
+    padding: 10px;
     text-align: center;
     box-sizing: border-box;
     margin-top: auto;
@@ -321,7 +321,6 @@ footer {
 }
 
 /* Media queries para pantallas más pequeñas */
-/* Media query para pantallas más pequeñas */
 @media (max-width: 599px) {
 
     .conteCarrousel {
@@ -349,7 +348,7 @@ footer {
 }
 
 /* Media queries para pantallas medianas y grandes */
-@media (min-width: 600px) and (max-width: 1400px) {
+@media (min-width: 600px) and (max-width: 1029px) {
 
     body{
         font-size: 24px;
@@ -401,23 +400,10 @@ footer {
     }
 }
 
-@media (min-width: 1401px) {
+@media (min-width: 1200px) {
 
     body{
         font-size: 24px;
-    }
-
-    .iconoHome {
-        font-size: 24px; /* Tamaño de fuente del texto */
-    }
-
-    .iconoHome span {
-        font-size: 24px;
-    }
-
-    .tituloHeader img {
-        width: 150px; /* Ajusta este valor según el tamaño que desees */
-        height: auto; /* Mantiene la proporción de la imagen */
     }
 
     /* Estilos para el texto del servicio */
@@ -425,7 +411,11 @@ footer {
         font-size: 24px; /* Aumento del tamaño de la letra */
     }
 
+    .cabeza{
+        margin-bottom: 20px;
+    }
     .conteCarrousel {
+        margin-bottom: 10px;
         height: 450px; /* Ajusta la altura del carrusel */
     }
 
@@ -442,7 +432,7 @@ footer {
     }
 
     .mapa {
-        width: 25%;
+        width: 20%;
     }
 
     .btnReservar button {
@@ -452,7 +442,8 @@ footer {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 
-    .opcionReserva1 button.opcion1 {
+    .opcionReserva2 button.opcion1,
+    .opcionReserva3 button.opcion2 {
         font-size: 18px; /* Aumenta el tamaño del texto del botón */
         padding: 12px 24px; /* Ajusta el padding para que el botón sea más grande */
         background-color: #3498db; /* Cambia el color de fondo del botón si es necesario */
@@ -460,9 +451,11 @@ footer {
         border: none; /* Elimina el borde del botón si es necesario */
         cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     }
-    
-    .opcionReserva1 button.opcion1:hover {
+
+    .opcionReserva2 button.opcion1:hover,
+    .opcionReserva3 button.opcion2:hover {
         background-color: #2980b9; /* Cambia el color de fondo del botón al pasar el cursor */
     }
+
 }
 
