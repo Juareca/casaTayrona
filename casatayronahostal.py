@@ -7,12 +7,12 @@ import os
 app = Flask(__name__)
 
 # Configuración de SES (reemplaza con tus propias credenciales)
-smtp_username = "AKIA2UC27IZCBIS5ER7G"
-smtp_password = "BNXVglCvJkFqftPcEmKqENsg7eMxd1Lub3uWHbdp/QsL"
-smtp_server = "email-smtp.sa-east-1.amazonaws.com"
-smtp_port = 587
-smtp_verified_email = "alberjuan2411@gmail.com"
-smtp_verified_casatayrona = "casatayrona17@gmail.com"
+smtp_username = " "
+smtp_password = " "
+smtp_server = " "
+smtp_port = 
+smtp_verified_email = " "
+smtp_verified_casatayrona = " "
 
 @app.route('/')
 def index():
